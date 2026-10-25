@@ -9,7 +9,14 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "keywords": ["nptel", "quiz", "java"],
+  "keywords": [
+    "nptel",
+    "quiz",
+    "java"
+  ],
   "author": "Nanichowdary04",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/blob": "^2.8.2"
+  }
 }

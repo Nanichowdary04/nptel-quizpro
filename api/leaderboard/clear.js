@@ -2,9 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+let blobModule = null;
+try {
+  blobModule = require('@vercel/blob');
+} catch (e) {}
+
 const LEADERBOARD_FILE = path.join(os.tmpdir(), 'leaderboard.json');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, apikey');
@@ -15,12 +20,21 @@ module.exports = (req, res) => {
   }
 
   if (req.method === 'POST') {
+    if (blobModule && process.env.BLOB_READ_WRITE_TOKEN) {
+      try {
+        await blobModule.put('leaderboard.json', '[]', {
+          access: 'public',
+          addRandomSuffix: false,
+          contentType: 'application/json'
+        });
+      } catch (e) {
+        console.warn('Blob clear error:', e.message);
+      }
+    }
     try {
       fs.writeFileSync(LEADERBOARD_FILE, '[]', 'utf8');
-      res.status(200).json({ success: true, count: 0, message: 'All usernames and leaderboard data cleared' });
-    } catch (e) {
-      res.status(500).json({ error: 'Failed to clear leaderboard' });
-    }
+    } catch (e) {}
+    res.status(200).json({ success: true, count: 0, message: 'All usernames and leaderboard data cleared' });
     return;
   }
 

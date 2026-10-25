@@ -2,31 +2,68 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
+let blobModule = null;
+try {
+  blobModule = require('@vercel/blob');
+} catch (e) {}
+
 const LEADERBOARD_FILE = path.join(os.tmpdir(), 'leaderboard.json');
 
-function readLeaderboard() {
-  try {
-    if (!fs.existsSync(LEADERBOARD_FILE)) {
-      return [];
+async function readLeaderboard() {
+  if (blobModule && process.env.BLOB_READ_WRITE_TOKEN) {
+    try {
+      const { blobs } = await blobModule.list({ prefix: 'leaderboard.json' });
+      const target = blobs.find(b => b.pathname === 'leaderboard.json');
+      if (target) {
+        const response = await fetch(`${target.url}?t=${Date.now()}`, { cache: 'no-store' });
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data)) return data;
+        }
+      }
+    } catch (e) {
+      console.warn('Blob read fallback:', e.message);
     }
-    const data = fs.readFileSync(LEADERBOARD_FILE, 'utf8');
-    const parsed = JSON.parse(data);
-    return Array.isArray(parsed) ? parsed : [];
-  } catch (err) {
-    return [];
   }
+
+  try {
+    if (fs.existsSync(LEADERBOARD_FILE)) {
+      const data = fs.readFileSync(LEADERBOARD_FILE, 'utf8');
+      const parsed = JSON.parse(data);
+      return Array.isArray(parsed) ? parsed : [];
+    }
+    const rootSeed = path.join(process.cwd(), 'leaderboard.json');
+    if (fs.existsSync(rootSeed)) {
+      const data = fs.readFileSync(rootSeed, 'utf8');
+      const parsed = JSON.parse(data);
+      return Array.isArray(parsed) ? parsed : [];
+    }
+  } catch (err) {}
+  return [];
 }
 
-function writeLeaderboard(entries) {
+async function writeLeaderboard(entries) {
+  let savedToBlob = false;
+  if (blobModule && process.env.BLOB_READ_WRITE_TOKEN) {
+    try {
+      await blobModule.put('leaderboard.json', JSON.stringify(entries, null, 2), {
+        access: 'public',
+        addRandomSuffix: false,
+        contentType: 'application/json'
+      });
+      savedToBlob = true;
+    } catch (e) {
+      console.warn('Blob write error:', e.message);
+    }
+  }
+
   try {
     fs.writeFileSync(LEADERBOARD_FILE, JSON.stringify(entries, null, 2), 'utf8');
-    return true;
-  } catch (err) {
-    return false;
-  }
+  } catch (err) {}
+  return savedToBlob || true;
 }
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, apikey');
@@ -37,14 +74,18 @@ module.exports = (req, res) => {
   }
 
   if (req.method === 'GET') {
-    const list = readLeaderboard();
+    const list = await readLeaderboard();
     res.status(200).json(list);
     return;
   }
 
   if (req.method === 'POST') {
     try {
-      const entry = req.body || {};
+      let body = req.body;
+      if (typeof body === 'string') {
+        try { body = JSON.parse(body); } catch (e) {}
+      }
+      const entry = body || {};
       const cleanUser = String(entry.username || '').trim().replace(/\s+/g, ' ');
       if (!cleanUser || cleanUser.length < 1 || cleanUser.length > 24) {
         res.status(400).json({ error: 'Username must be between 1 and 24 characters' });
@@ -67,7 +108,7 @@ module.exports = (req, res) => {
         created_at: new Date().toISOString()
       };
 
-      const list = readLeaderboard();
+      const list = await readLeaderboard();
       list.push(newRecord);
       list.sort((a, b) =>
         (Number(b.percent) || 0) - (Number(a.percent) || 0) ||
@@ -75,7 +116,7 @@ module.exports = (req, res) => {
         (Number(a.seconds) || 0) - (Number(b.seconds) || 0)
       );
       const topList = list.slice(0, 50);
-      writeLeaderboard(topList);
+      await writeLeaderboard(topList);
 
       res.status(200).json({ success: true, count: topList.length });
     } catch (e) {
