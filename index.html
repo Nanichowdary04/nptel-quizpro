@@ -1,0 +1,1192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NPTEL QuizPro — Java Exam Prep</title>
+<style>
+:root{--bg:#f5f7fc;--panel:#fff;--ink:#111b36;--muted:#69758f;--line:#e5eaf4;--blue:#356dff;--blue2:#6557f5;--soft:#edf3ff;--green:#139b75;--red:#e45b68;--shadow:0 12px 32px rgba(24,44,88,.07)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#e8edff 0,transparent 36%),var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+button,select{font:inherit;cursor:pointer}button{border:0} .app{display:grid;grid-template-columns:238px 1fr;min-height:100vh}
+aside{background:#101a36;color:#eaf0ff;padding:25px 16px;display:flex;flex-direction:column;gap:26px;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:11px;align-items:center;padding:4px 10px 22px;border-bottom:1px solid #2a3552}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#4d8cff,#7658f5);display:grid;place-items:center;font-size:22px;box-shadow:0 6px 22px #386cff55}.brand strong{display:block;font-size:18px;letter-spacing:-.4px}.brand small{color:#a9b8dd}
+nav{display:grid;gap:7px}nav button{background:transparent;color:#b9c6e3;text-align:left;padding:12px 14px;border-radius:11px;display:flex;gap:12px;align-items:center;transition:.2s}nav button:hover,nav button.active{background:linear-gradient(100deg,#315ee7,#5149c9);color:white;transform:translateX(2px)}.aside-note{margin-top:auto;border:1px solid #344061;background:#1a2747;border-radius:15px;padding:15px;color:#c4d0eb;font-size:13px}.aside-note b{display:block;color:white;margin-bottom:5px}
+main{padding:25px clamp(16px,3vw,38px) 40px;min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:23px;gap:14px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.4px;color:#62729a;font-weight:800}.topbar h1{font-size:24px;margin:3px 0 0;letter-spacing:-.7px}.profile{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;display:flex;gap:9px;align-items:center;font-weight:650}.avatar{width:30px;height:30px;border-radius:50%;background:#e5eaff;color:#365de5;display:grid;place-items:center}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#142449,#253f8b 65%,#4b52c5);color:#fff;border-radius:23px;padding:28px 30px;margin-bottom:20px;box-shadow:0 16px 36px #1c347b25;animation:rise .5s ease both}.hero:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:5%;top:-125px;border:1px solid #ffffff30;box-shadow:0 0 0 28px #ffffff08,0 0 0 60px #ffffff06}.hero h2{font-size:clamp(25px,3vw,35px);letter-spacing:-1px;margin:0 0 8px;position:relative;z-index:1}.hero p{color:#d3defe;margin:0 0 20px;max-width:620px;position:relative;z-index:1}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}.btn{padding:11px 16px;border-radius:11px;font-weight:750;transition:transform .18s,box-shadow .18s,background .18s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(110deg,#3978ff,#6958f5);color:white;box-shadow:0 7px 17px #4268ed35}.light{background:white;color:#20345f}.outline{background:transparent;border:1px solid var(--line);color:var(--ink)}.danger{background:#fff0f1;color:#c73f50}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.stat{background:var(--panel);border:1px solid #e9edf6;border-radius:17px;padding:17px;box-shadow:var(--shadow);display:flex;align-items:center;gap:13px;animation:rise .5s ease both}.stat:nth-child(2){animation-delay:.05s}.stat:nth-child(3){animation-delay:.1s}.stat:nth-child(4){animation-delay:.15s}.stat-icon{width:43px;height:43px;border-radius:14px;background:#edf3ff;color:#356dff;display:grid;place-items:center;font-size:21px}.stat strong{font-size:24px;display:block;line-height:1.2}.stat span{color:var(--muted);font-size:13px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:17px;align-items:start}.card{background:var(--panel);border:1px solid #e8edf5;border-radius:19px;box-shadow:var(--shadow)}.quiz{padding:22px}.quiz-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line)}.quiz-head h3{margin:0;font-size:18px;letter-spacing:-.4px}.sub{color:var(--muted);font-size:13px}.timer{background:#f4f6fc;border-radius:10px;padding:8px 11px;font-variant-numeric:tabular-nums;font-weight:750}.progress-row{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin:17px 0 8px}.track{height:8px;background:#edf0f7;border-radius:20px;overflow:hidden}.fill{height:100%;width:0;background:linear-gradient(90deg,#367bff,#795cf5);border-radius:20px;transition:width .35s ease}
+.question{padding:22px 0 12px;animation:fade .25s ease}.q-label{color:#52648e;font-size:13px;font-weight:750;margin-bottom:10px}.q-text{font-size:18px;font-weight:750;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 18px}.options{display:grid;gap:9px}.option{width:100%;text-align:left;display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:.18s}.option:hover{border-color:#8daaff;background:#f8faff}.letter{width:27px;height:27px;flex:0 0 27px;border-radius:8px;background:#f0f3fa;color:#63718f;display:grid;place-items:center;font-size:12px;font-weight:800}.option.selected{border-color:#477aff;background:#eff4ff;box-shadow:0 0 0 2px #477aff12}.option.selected .letter{background:#356dff;color:white}.option.correct{border:2px solid #149a75!important;background:#edfbf6!important}.option.correct .letter{background:#149a75!important;color:white!important}.option.wrong{border:2px solid #df5967!important;background:#fff2f3!important}.option.wrong .letter{background:#df5967!important;color:white!important}
+.feedback{padding:14px 16px;border-radius:12px;margin-top:16px;background:#eefaf5;border:1.5px solid #149a75;color:#0b5e47;box-shadow:0 4px 14px rgba(20,154,117,0.08);animation:rise .2s ease}.feedback.bad{background:#fff3f4;border-color:#df5967;color:#9e2533;box-shadow:0 4px 14px rgba(223,89,103,0.08)}.feedback strong{display:block;margin-bottom:3px}.quiz-controls{display:flex;gap:9px;align-items:center;justify-content:space-between;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}.controls-left,.controls-right{display:flex;gap:8px}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.navigator{padding:19px;position:sticky;top:18px}.nav-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}.nav-head h3{font-size:16px;margin:0}.legend{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin:13px 0}.dot{display:inline-block;width:8px;height:8px;border-radius:3px;margin-right:4px;background:#dfe5f1}.dot.done{background:#15a27c}.dot.current{background:#356dff}.dot.marked{background:#f3a329}.numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:15px 0 18px}.num{border:1px solid var(--line);border-radius:9px;aspect-ratio:1;background:#fff;color:#52607d;font-size:12px;transition:.18s}.num:hover{border-color:#8ca9ff}.num.current{background:#356dff;border-color:#356dff;color:#fff;box-shadow:0 4px 10px #356dff40}.num.done{background:#e8faf4;border-color:#b8ead9;color:#087a5b}.num.marked{box-shadow:inset 0 -3px #f4a62a}.submit{width:100%;margin-top:4px}.tip{margin-top:17px;padding:14px;border-radius:13px;background:#f1f5ff;color:#53648b;font-size:12px}.tip b{color:#293e70}
+.result{padding:25px;text-align:center}.result .big{font-size:52px;font-weight:850;letter-spacing:-2px;background:linear-gradient(100deg,#326dff,#7658ef);color:transparent;background-clip:text}.result h2{margin:0}.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}.result-grid div{background:#f5f7fd;padding:15px;border-radius:12px;border:1px solid #eef2fa}.result-grid strong{font-size:22px;display:block}.result-grid span{font-size:12px;color:var(--muted)}
+.key-sheet{margin-top:28px;text-align:left;border-top:2px dashed var(--line);padding-top:24px}
+.key-sheet-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+.key-sheet-title{font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--ink);display:flex;align-items:center;gap:8px}
+.key-filters{display:flex;gap:7px;flex-wrap:wrap}
+.key-filter-btn{padding:7px 14px;border-radius:20px;font-size:12px;font-weight:750;background:#f0f3fa;color:#52607d;border:1px solid var(--line);cursor:pointer;transition:.15s}
+.key-filter-btn:hover,.key-filter-btn.active{background:#356dff;color:#fff;border-color:#356dff}
+.key-list{display:grid;gap:14px}
+.key-card{border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;background:#fff;transition:.18s}
+.key-card.card-correct{border-color:#149a75;background:#f9fdfb}
+.key-card.card-wrong{border-color:#df5967;background:#fffbfc}
+.key-card.card-skipped{border-color:#d4dcfa;background:#fbfdff}
+.key-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px;flex-wrap:wrap}
+.key-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:800;padding:4px 10px;border-radius:20px}
+.badge-correct{background:#e6fff5;color:#087a5b;border:1px solid #149a75}
+.badge-wrong{background:#fff0f1;color:#c73f50;border:1px solid #df5967}
+.badge-skipped{background:#f0f3fa;color:#52607d;border:1px solid #d4dcfa}
+.key-q-text{font-size:15px;font-weight:700;line-height:1.5;margin:0 0 12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.key-options{display:grid;gap:6px;margin-bottom:10px}
+.key-opt{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:9px;font-size:13.5px;border:1px solid #edf0f7;background:#fafbfe}
+.key-opt.opt-user-wrong{border-color:#df5967;background:#fff0f1;color:#9e2533;font-weight:600}
+.key-opt.opt-correct{border-color:#149a75;background:#e7fbf4;color:#0b5e47;font-weight:700}
+.key-opt.opt-user-correct{border-color:#149a75;background:#e7fbf4;color:#0b5e47;font-weight:700;box-shadow:0 0 0 1px #149a75}
+.key-status-row{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid #edf0f7;font-size:13px}
+
+.leaderboard{margin-top:17px;padding:19px}.leaderboard h3{margin:0 0 5px}.leaderboard table{width:100%;border-collapse:collapse;font-size:13px}.leaderboard th,.leaderboard td{text-align:left;padding:10px 7px;border-bottom:1px solid var(--line)}.leaderboard th{color:var(--muted);font-weight:700}.rank-pill{display:inline-grid;place-items:center;min-width:28px;height:28px;border-radius:9px;background:#edf3ff;color:#356dff;font-weight:800}.perfect-wrap{margin-top:20px;border-radius:18px;overflow:hidden;background:#101a36;color:white;text-align:left;display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,35%);align-items:stretch}.perfect-copy{padding:24px}.perfect-copy h3{font-size:25px;margin:0 0 7px}.perfect-copy p{color:#c7d4f6}.perfect-wrap img{width:100%;height:100%;max-height:360px;object-fit:cover;object-position:top center}.perfect-tag{display:inline-block;border-radius:999px;padding:6px 10px;background:#e6fff5;color:#087a5b;font-weight:800;font-size:12px}.history-list{display:grid;gap:8px;text-align:left}.history-row{display:flex;justify-content:space-between;gap:10px;padding:11px 13px;border-radius:10px;background:#f5f7fd}
+.reward-video{width:100%;max-width:360px;border-radius:14px;background:#05070d;margin:18px auto;display:block;box-shadow:0 10px 30px #101a3626}
+.leader-video{width:86px;height:68px;object-fit:cover;border-radius:8px;background:#111}
+.username-chip{display:flex;gap:8px;align-items:center;cursor:pointer}
+.name-modal{position:fixed;inset:0;background:#101a36b8;z-index:20;display:grid;place-items:center;padding:18px}
+.name-box{width:min(420px,100%);background:#fff;border-radius:20px;padding:25px;box-shadow:0 25px 70px #0004}
+.name-box h2{margin:0 0 8px}.name-box p{color:var(--muted)}.name-box input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;margin:10px 0 15px;font:inherit}
+.hidden{display:none!important}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes fade{from{opacity:.5;transform:translateX(5px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:1050px){.layout{grid-template-columns:minmax(0,1fr) 235px}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.app{grid-template-columns:1fr}aside{position:relative;height:auto;padding:13px;gap:10px}.brand{padding-bottom:10px}nav{grid-template-columns:repeat(4,1fr);gap:4px}nav button{justify-content:center;padding:10px 5px;font-size:11px;display:flex;flex-direction:column;gap:4px}.aside-note{display:none}main{padding:17px 13px 30px}.topbar h1{font-size:20px}.hero{padding:22px}.layout{grid-template-columns:1fr}.navigator{position:static;order:-1}.numbers{grid-template-columns:repeat(10,1fr)}.num{font-size:10px}.quiz{padding:16px}.q-text{font-size:16px}.stats{gap:8px}.stat{padding:12px;gap:8px}.stat strong{font-size:20px}.stat-icon{width:36px;height:36px}.result-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section id="loginScreen" class="name-modal" aria-modal="true" role="dialog">
+  <div class="name-box">
+    <div class="logo" style="margin-bottom:18px">✦</div>
+    <div class="eyebrow">WELCOME TO NPTEL QUIZPRO</div>
+    <h2 id="loginTitle">Enter your username</h2>
+    <p id="loginSubtitle">No password needed for this demo. Your username appears on the leaderboard.</p>
+    <form id="loginForm">
+      <label for="usernameInput"><b>Username</b></label>
+      <input id="usernameInput" name="username" minlength="2" maxlength="24" autocomplete="nickname" placeholder="e.g. JavaStar (2–24 chars)" required>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <button class="btn primary" type="submit" style="flex:1">Continue to quiz →</button>
+        <button class="btn outline hidden" type="button" id="cancelLoginBtn" style="flex:0 0 auto">Cancel</button>
+      </div>
+      <div id="loginError" class="sub" style="color:#c73f50;margin-top:10px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;flex-wrap:wrap;gap:8px">
+        <p class="sub" style="font-size:12px;margin:0;color:var(--muted);flex:1">Shared live across laptops via quiz server &amp; cloud.</p>
+        <button type="button" id="resetUserDataBtn" class="btn danger" style="padding:4px 8px;font-size:11px;border:1px solid #fecdd3" title="Clear all local & server usernames">Clear all data</button>
+      </div>
+    </form>
+  </div>
+</section>
+<div class="app">
+<aside>
+  <div class="brand"><div class="logo">✦</div><div><strong>NPTEL QuizPro</strong><small>Java exam preparation</small></div></div>
+  <nav>
+    <button class="active" data-mode="practice">▦ <span>Practice</span></button>
+    <button data-mode="mock">◷ <span>Mock Test</span></button>
+    <button data-mode="wrong">↻ <span>Wrong Answers</span></button>
+    <button data-mode="bookmarks">☆ <span>Bookmarks</span></button>
+    <button id="leaderboardNav">🏆 <span>Leaderboard</span></button>
+  </nav>
+  <div class="aside-note"><b>Study smarter</b>All questions are extracted from your uploaded NPTEL Java assignment document.</div>
+</aside>
+<main>
+  <div class="topbar"><div><div class="eyebrow">EXAM PREPARATION / JAVA</div><h1>Your practice workspace</h1></div><button class="profile username-chip" id="changeNameBtn"><div class="avatar" id="avatarLetter">N</div><span id="profileName">Set username</span> ✎</button></div>
+  <section class="hero" id="heroSection">
+    <div class="eyebrow" style="color:#b8caff">NPTEL • PROGRAMMING IN JAVA</div>
+    <h2>Prepare with confidence.</h2>
+    <p>Practise your 120 assignment questions, review mistakes, and take a timed mock test before the exam.</p>
+    <div class="hero-actions"><button class="btn light" id="startBtn">Start practising →</button><button class="btn" style="background:#ffffff18;color:white;border:1px solid #ffffff45" id="resetBtn">Reset progress</button></div>
+  </section>
+  <section class="stats" id="statsSection">
+    <div class="stat"><div class="stat-icon">▤</div><div><strong id="totalStat">120</strong><span>Total questions</span></div></div>
+    <div class="stat"><div class="stat-icon" style="background:#e7fbf4;color:#139b75">✓</div><div><strong id="attemptStat">0</strong><span>Attempted</span></div></div>
+    <div class="stat"><div class="stat-icon" style="background:#fff0f1;color:#df5967">◎</div><div><strong id="accuracyStat">—</strong><span>Accuracy</span></div></div>
+    <div class="stat"><div class="stat-icon" style="background:#f0edff;color:#6b58e9">◷</div><div><strong id="completeStat">0 / 120</strong><span>Completed</span></div></div>
+  </section>
+  <div class="layout" id="quizLayout">
+    <section class="card quiz" id="quizCard">
+      <div class="quiz-head"><div><h3 id="quizTitle">Java Practice Quiz</h3><div class="sub" id="quizSubtitle">Question 1 of 120</div></div><div style="display:flex;gap:8px;align-items:center"><div class="timer" id="timer">⏱ 60:00</div><button class="btn outline" id="pauseBtn">Pause</button></div></div>
+      <div class="progress-row"><span id="progressLabel">Question 1 of 120</span><span id="progressPct">1%</span></div><div class="track"><div class="fill" id="progressFill"></div></div>
+      <div class="question" id="questionArea"></div>
+      <div class="quiz-controls"><div class="controls-left"><button class="btn outline" id="prevBtn">← Previous</button><button class="btn outline" id="markBtn">☆ Mark</button></div><div class="controls-right"><button class="btn primary" id="nextBtn">Next →</button></div></div>
+    </section>
+    <aside class="card navigator">
+      <div class="nav-head"><h3>Question navigator</h3><span class="sub" id="navCount">0/120</span></div>
+      <div class="legend"><span><i class="dot current"></i>Current</span><span><i class="dot done"></i>Answered</span><span><i class="dot marked"></i>Marked</span></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span class="sub">Jump to question</span><select id="weekFilter" style="border:1px solid var(--line);border-radius:8px;padding:6px;color:var(--ink);max-width:125px"><option value="all">All weeks</option></select></div>
+      <div class="numbers" id="numbers"></div>
+      <button class="btn primary submit" id="submitBtn">Submit quiz →</button>
+      <div class="tip"><b>Tip</b><br>Instant feedback appears immediately on selection in all modes. Submit when ready to log your final score.</div>
+    </aside>
+  </div>
+  <section class="card leaderboard" id="dashboardLeaderboard">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <div>
+        <h3 style="margin:0 0 4px">🏆 Community Leaderboard</h3>
+        <div class="sub" id="leaderboardStatus">Leaderboard rankings</div>
+      </div>
+      <button class="btn danger" id="clearLeaderboardBtn" style="padding:6px 12px;font-size:12px;border:1px solid #fecdd3" title="Clear all usernames and history">🗑 Clear All Data</button>
+    </div>
+    <div id="leaderboardBody" style="margin-top:10px"></div>
+  </section>
+  <section class="card leaderboard hidden" id="leaderboardPage">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
+      <div>
+        <div class="eyebrow">COMMUNITY</div>
+        <h2 style="margin:4px 0 8px">Leaderboard</h2>
+        <div id="leaderboardPageStatus" style="margin-bottom:8px"></div>
+      </div>
+      <button class="btn danger" id="pageClearLeaderboardBtn" style="padding:7px 14px;font-size:13px;border:1px solid #fecdd3">🗑 Clear All Data</button>
+    </div>
+    <p class="sub">Ranked by score percentage, correct answers, then time taken. Reward videos appear for qualifying score bands.</p>
+    <div id="leaderboardPageBody" style="margin-top:16px"></div>
+    <button class="btn primary" id="backToQuizBtn" style="margin-top:18px">← Back to quiz</button>
+  </section>
+  <section class="card result hidden" id="resultCard"></section>
+</main>
+</div>
+<script src="config.js"></script>
+<script>
+const QUESTIONS = [{"id": 1, "week": 1, "question": "Consider the following program. class NPTEL { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } } What is the output of the above code?", "options": [{"key": "A", "text": "Hello, World!"}, {"key": "B", "text": "HelloWorld!"}, {"key": "C", "text": "Compilation Error"}, {"key": "D", "text": "Runtime Error"}], "answer": "A", "answerText": "Hello, World!"}, {"id": 2, "week": 1, "question": "A Java file with the extension .class contains:", "options": [{"key": "A", "text": "Java source code"}, {"key": "B", "text": "HTML tags"}, {"key": "C", "text": "Java bytecode"}, {"key": "D", "text": "A program file written in Java programming language"}], "answer": "C", "answerText": "Java bytecode"}, {"id": 3, "week": 1, "question": "Which of the following is NOT an object-oriented programming paradigm?", "options": [{"key": "A", "text": "Encapsulation"}, {"key": "B", "text": "Inheritance"}, {"key": "C", "text": "Polymorphism"}, {"key": "D", "text": "Dynamic memory allocation"}], "answer": "D", "answerText": "Dynamic memory allocation"}, {"id": 4, "week": 1, "question": "What is the correct sequence of steps to execute a Java program?", "options": [{"key": "A", "text": "Run → Edit → Compile"}, {"key": "B", "text": "Edit → Run → Compile"}, {"key": "C", "text": "Compile → Edit → Run"}, {"key": "D", "text": "Edit → Compile → Run"}], "answer": "D", "answerText": "Edit → Compile → Run"}, {"id": 5, "week": 1, "question": "Which program is used to compile Java source code into bytecode?", "options": [{"key": "A", "text": "javap"}, {"key": "B", "text": "javac"}, {"key": "C", "text": "java"}, {"key": "D", "text": "javad"}], "answer": "B", "answerText": "javac"}, {"id": 6, "week": 1, "question": "In Java, what is the role of the public static void main(String[] args) method?", "options": [{"key": "A", "text": "Initialization method"}, {"key": "B", "text": "Execution entry point"}, {"key": "C", "text": "Constructor"}, {"key": "D", "text": "Destructor"}], "answer": "B", "answerText": "Execution entry point"}, {"id": 7, "week": 1, "question": "Which of the following is not a feature of Java?", "options": [{"key": "A", "text": "Platform Independence"}, {"key": "B", "text": "Object-Oriented Programming"}, {"key": "C", "text": "Supports Explicit Pointers"}, {"key": "D", "text": "Supports Polymorphism"}], "answer": "C", "answerText": "Supports Explicit Pointers"}, {"id": 8, "week": 1, "question": "What is the primary purpose of the Java Virtual Machine (JVM) in the Java programming language?", "options": [{"key": "A", "text": "Graphical User Interface"}, {"key": "B", "text": "Platform Independence"}, {"key": "C", "text": "Code Debugging"}, {"key": "D", "text": "Game Engine"}], "answer": "B", "answerText": "Platform Independence"}, {"id": 9, "week": 1, "question": "Consider the following program. public class Question { public static void main(String[] args) { int x = 5; x *= (2 + 8); System.out.println(x); } } What is the output of the above code?", "options": [{"key": "A", "text": "50"}, {"key": "B", "text": "10"}, {"key": "C", "text": "Compiler error"}, {"key": "D", "text": "5"}], "answer": "A", "answerText": "50"}, {"id": 10, "week": 1, "question": "Which of the following is true regarding how Java handles code execution?", "options": [{"key": "A", "text": "Java uses only an interpreter."}, {"key": "B", "text": "Java uses only a compiler."}, {"key": "C", "text": "Java uses both an interpreter and a compiler."}, {"key": "D", "text": "None of the above."}], "answer": "C", "answerText": "Java uses both an interpreter and a compiler."}, {"id": 11, "week": 2, "question": "What is the correct signature of the main method in Java?", "options": [{"key": "A", "text": "public static void main(String[] args)"}, {"key": "B", "text": "public void main(String args[])"}, {"key": "C", "text": "void main(String[] args)"}, {"key": "D", "text": "public static void main(String [])"}], "answer": "A", "answerText": "public static void main(String[] args)"}, {"id": 12, "week": 2, "question": "Consider the following code. public class VarPrint { int x = 30; static int y = 20; public static void main(String[] args) { VarPrint t1 = new VarPrint(); t1.x = 88; t1.y = 99; int z1 = t1.x + t1.y; VarPrint t2 = new VarPrint(); System.out.println(t2.x + \" \" + t2.y + \" \" + z1); } } What will be the output of the above Java program?", "options": [{"key": "A", "text": "30 99 178"}, {"key": "B", "text": "30 88 129"}, {"key": "C", "text": "30 99 187"}, {"key": "D", "text": "99 99 187"}], "answer": "C", "answerText": "30 99 187"}, {"id": 13, "week": 2, "question": "Consider the following code. The program demonstrates how Java evaluates expressions involving integers, strings, and the + operator. public class Argument { public static void main(String[] args) { Test t = new Test(); t.start(); } static class Test { void start() { int a = 4; int b = 5; System.out.print(\"\" + b + 3 + \"\"); System.out.print(a + b); System.out.print(\" \" + a + b + \"\"); System.out.print(foo() + a + b + \"\"); System.out.println(a + b + foo()); } String foo() { return \"foo\"; } } } What will be the output of the code given above?", "options": [{"key": "A", "text": "539 45foo45 9foo"}, {"key": "B", "text": "9 7 7 foo34 34foo"}, {"key": "C", "text": "72 34 34 foo34 34foo"}, {"key": "D", "text": "839 45foo45 9foo"}], "answer": "A", "answerText": "539 45foo45 9foo"}, {"id": 14, "week": 2, "question": "Which keyword is used in Java to refer to the current object?", "options": [{"key": "A", "text": "this"}, {"key": "B", "text": "that"}, {"key": "C", "text": "self"}, {"key": "D", "text": "current"}], "answer": "A", "answerText": "this"}, {"id": 15, "week": 2, "question": "Which of the following is true about constructors in a class?", "options": [{"key": "A", "text": "Constructors do not have a return type."}, {"key": "B", "text": "Constructors aren't used to initialize objects."}, {"key": "C", "text": "A class can have only one constructor."}, {"key": "D", "text": "Constructors cannot be overloaded."}], "answer": "A", "answerText": "Constructors do not have a return type."}, {"id": 16, "week": 2, "question": "Consider the following code snippet. The program creates an object, assigns a value to its instance variable through a constructor, and prints that value. class XYZ { int x; XYZ(int x) { this.x = x; } void printX() { System.out.println(this.x); } public static void main(String[] args) { XYZ obj = new XYZ(0); obj.printX(); } } What will be the output of the code given above?", "options": [{"key": "A", "text": "0"}, {"key": "B", "text": "10"}, {"key": "C", "text": "100"}, {"key": "D", "text": "Runtime error"}], "answer": "A", "answerText": "0"}, {"id": 17, "week": 2, "question": "Consider the code snippet given below. public class Main { public static void main(String[] args) { System.out.println(\"Hello\"); System.out.println(\"World\"); System.out.printf(\"Number: %d\", 10); } } What will be the output of the code given above?", "options": [{"key": "A", "text": "Hello World\\nNumber: 10"}, {"key": "B", "text": "Hello WorldNumber: 10"}, {"key": "C", "text": "Hello\\nWorld\\nNumber: 10"}, {"key": "D", "text": "Hello World\\nNumber: 10\\n"}], "answer": "C", "answerText": "Hello\\nWorld\\nNumber: 10"}, {"id": 18, "week": 2, "question": "Which class is used in Java to take runtime data input from the user?", "options": [{"key": "A", "text": "BufferReader"}, {"key": "B", "text": "UserInputStreamReader"}, {"key": "C", "text": "Scanner"}, {"key": "D", "text": "DataInputStreamReader"}], "answer": "C", "answerText": "Scanner"}, {"id": 19, "week": 2, "question": "How do you read a line of text from the console using the Scanner class in Java?", "options": [{"key": "A", "text": "scanner.readLine()"}, {"key": "B", "text": "scanner.nextLine()"}, {"key": "C", "text": "scanner.getLine()"}, {"key": "D", "text": "scanner.fetchLine()"}], "answer": "B", "answerText": "scanner.nextLine()"}, {"id": 20, "week": 2, "question": "Which of the following is the correct way to declare a class in Java?", "options": [{"key": "A", "text": "public class MyClass {}"}, {"key": "B", "text": "class MyClass[] {}"}, {"key": "C", "text": "public MyClass class {}"}, {"key": "D", "text": "MyClass public class {}"}], "answer": "A", "answerText": "public class MyClass {}"}, {"id": 21, "week": 3, "question": "Which of the following statements is true regarding the order of execution of constructors in an inheritance hierarchy?", "options": [{"key": "A", "text": "Derived class constructor will be called followed by the base class constructor."}, {"key": "B", "text": "Only base class constructor will be called."}, {"key": "C", "text": "Only derived class constructor will be called."}, {"key": "D", "text": "Base class constructor will be called followed by the derived class constructor."}], "answer": "D", "answerText": "Base class constructor will be called followed by the derived class constructor."}, {"id": 22, "week": 3, "question": "The super() method is used to:", "options": [{"key": "A", "text": "Call constructor of friend class."}, {"key": "B", "text": "Call constructor of the parent class."}, {"key": "C", "text": "Call constructor."}, {"key": "D", "text": "Is a declared method."}], "answer": "B", "answerText": "Call constructor of the parent class."}, {"id": 23, "week": 3, "question": "What is the output of the following Java program? Program: class Vehicle { public void move() { System.out.println(\"The vehicle moves\"); } } class Car extends Vehicle { public void move() { System.out.println(\"The car moves\"); } } public class Main { public static void main(String[] args) { Vehicle vehicle = new Car(); vehicle.move(); } }", "options": [{"key": "A", "text": "\"The vehicle moves\""}, {"key": "B", "text": "\"The car moves\""}, {"key": "C", "text": "The code does not compile."}, {"key": "D", "text": "None of the above."}], "answer": "B", "answerText": "\"The car moves\""}, {"id": 24, "week": 3, "question": "Which of the following is NOT true regarding the final keyword in Java?", "options": [{"key": "A", "text": "A final method cannot be overridden in a subclass."}, {"key": "B", "text": "A final variable can only be assigned once."}, {"key": "C", "text": "A final class can have subclasses."}, {"key": "D", "text": "A final variable can be assigned during declaration or in the constructor."}], "answer": "C", "answerText": "A final class can have subclasses."}, {"id": 25, "week": 3, "question": "Which type of inheritance leads to the \"Diamond Problem\"?", "options": [{"key": "A", "text": "Single-level"}, {"key": "B", "text": "Multi-level"}, {"key": "C", "text": "Multiple"}, {"key": "D", "text": "Hierarchical"}], "answer": "C", "answerText": "Multiple"}, {"id": 26, "week": 3, "question": "Members of a class which are not intended to be inherited by subclasses should be declared as:", "options": [{"key": "A", "text": "Public members"}, {"key": "B", "text": "Protected members"}, {"key": "C", "text": "Private members"}, {"key": "D", "text": "Private or Protected members"}], "answer": "C", "answerText": "Private members"}, {"id": 27, "week": 3, "question": "In Java, is it possible to override a static method?", "options": [{"key": "A", "text": "Yes, we can override a static method just like we do with instance methods."}, {"key": "B", "text": "No, static methods cannot be overridden because they belong to the class, not the object."}, {"key": "C", "text": "It depends on whether the static method is declared as final or not."}, {"key": "D", "text": "It depends on the access modifier of the static method."}], "answer": "B", "answerText": "No, static methods cannot be overridden because they belong to the class, not the object."}, {"id": 28, "week": 3, "question": "What is the output of the following Java program? Program: public class NptelExample { public static int fun(int n) { if (n == 0) { return 1; } return n * fun(n - 1); } public static void main(String[] args) { System.out.println(fun(5)); } }", "options": [{"key": "A", "text": "5"}, {"key": "B", "text": "24"}, {"key": "C", "text": "120"}, {"key": "D", "text": "Runtime Error"}], "answer": "C", "answerText": "120"}, {"id": 29, "week": 3, "question": "Which of the following statements about abstract classes in Java is correct?", "options": [{"key": "A", "text": "Abstract classes can be instantiated directly."}, {"key": "B", "text": "An abstract class must contain at least one abstract method."}, {"key": "C", "text": "A class inheriting from an abstract class must implement all its abstract methods unless it is itself abstract."}, {"key": "D", "text": "Abstract classes can be marked as final."}], "answer": "C", "answerText": "A class inheriting from an abstract class must implement all its abstract methods unless it is itself abstract."}, {"id": 30, "week": 3, "question": "What will be the output of the following program? Program: class superDemoClass { final int a = 20; } class subDemoClass extends superDemoClass { void subFunc() { a = 40; System.out.println(\"value of a = \" + a); } } class demo { public static void main(String[] args) { subDemoClass subc = new subDemoClass(); subc.subFunc(); } }", "options": [{"key": "A", "text": "Value of a = 20"}, {"key": "B", "text": "Error: cannot assign a value to final variable a."}, {"key": "C", "text": "Error: unknown variable a in class subDemoClass."}, {"key": "D", "text": "Value of a = 40"}], "answer": "B", "answerText": "Error: cannot assign a value to final variable a."}, {"id": 31, "week": 4, "question": "What is the process by which we can control what parts of a program can access the members of a class?", "options": [{"key": "A", "text": "Polymorphism"}, {"key": "B", "text": "Aggregation"}, {"key": "C", "text": "Encapsulation"}, {"key": "D", "text": "Recursion"}], "answer": "C", "answerText": "Encapsulation"}, {"id": 32, "week": 4, "question": "Consider the program given below. public class Main { public static void main(String args[]) { System.out.println(cos(2 * PI)); } } What will be the output if the program is executed?", "options": [{"key": "A", "text": "It will give compile-time error"}, {"key": "B", "text": "It will give run-time error"}, {"key": "C", "text": "1.0"}, {"key": "D", "text": "3.14"}], "answer": "A", "answerText": "It will give compile-time error"}, {"id": 33, "week": 4, "question": "Consider the following code. class Person { int a = 1; int b = 1; public Person() { System.out.print(a + b + \"Java\" + a); } } class Employee extends Person { int a = 0; int b = 1; public Employee() { System.out.print(a + b + \"Java\" + a); } } public class Question { public static void main(String args[]) { Person p = new Employee(); } } What will be the output of the code given above?", "options": [{"key": "A", "text": "2Java11Java0"}, {"key": "B", "text": "1Java10Java0"}, {"key": "C", "text": "1Java01Java1"}, {"key": "D", "text": "0Java11Java0"}], "answer": "A", "answerText": "2Java11Java0"}, {"id": 34, "week": 4, "question": "In Java, can a subclass in a different package access a superclass's protected method?", "options": [{"key": "A", "text": "Yes, without any restrictions."}, {"key": "B", "text": "Yes, but only if they are in the same package."}, {"key": "C", "text": "No, protected methods are not accessible by subclasses."}, {"key": "D", "text": "Yes, but only through inheritance (i.e., using super or this, not via an object)."}], "answer": "D", "answerText": "Yes, but only through inheritance (i.e., using super or this, not via an object)."}, {"id": 35, "week": 4, "question": "A package is a collection of:", "options": [{"key": "A", "text": "Only classes"}, {"key": "B", "text": "Only interfaces"}, {"key": "C", "text": "Editing tools"}, {"key": "D", "text": "Classes, methods and interfaces"}], "answer": "D", "answerText": "Classes, methods and interfaces"}, {"id": 36, "week": 4, "question": "Consider the following two programs. The question compares the pre-increment and post-increment operators. Program 1 public class Main1 { public static void main(String args[]) { int number = 10; System.out.println(number++ + ++number); } } Program 2 public class Main2 { public static void main(String args[]) { int number = 10; System.out.println(++number + number++); } } Choose the best option among the following for the code snippets given above.", "options": [{"key": "A", "text": "Both pre-increment and post-increment operators become pre-increment during printing."}, {"key": "B", "text": "Both pre-increment and post-increment operators become post-increment during printing."}, {"key": "C", "text": "Both Main1 and Main2 classes give the same output."}, {"key": "D", "text": "Pre-increment and post-increment operators don't work during printing."}], "answer": "C", "answerText": "Both Main1 and Main2 classes give the same output."}, {"id": 37, "week": 4, "question": "Consider the following program. class Base { public void print() { System.out.println(\"Base class...\"); } } class Derived extends Base { public void print() { System.out.println(\"Derived class...\"); } } public class Main { private static void main(String[] args) { Base b = new Base(); b.print(); Derived d = new Derived(); d.print(); } } How many errors does this program contain?", "options": [{"key": "A", "text": "None"}, {"key": "B", "text": "1"}, {"key": "C", "text": "2"}, {"key": "D", "text": "3"}], "answer": "B", "answerText": "1"}, {"id": 38, "week": 4, "question": "Consider the code given below. First Java file: Teacher.java package nptel1; public class Teacher { protected void showMarks() { System.out.println(\"100 marks\"); } } Second Java file: Student.java package nptel2; import nptel1.*; public class Student extends Teacher { void show() { showMarks(); } public static void main(String[] args) { Student st = new Student(); st.show(); } } What is the output of the above Java code snippet with protected access modifier?", "options": [{"key": "A", "text": "100 marks"}, {"key": "B", "text": "No output"}, {"key": "C", "text": "Compiler error"}, {"key": "D", "text": "None of the above"}], "answer": "A", "answerText": "100 marks"}, {"id": 39, "week": 4, "question": "Choose the correct syntax of a Java package below.", "options": [{"key": "A", "text": "package PACKAGE_NAME;"}, {"key": "B", "text": "package PACKAGE_NAME.*;"}, {"key": "C", "text": "pkg PACKAGE_NAME;"}, {"key": "D", "text": "pkg PACKAGE_NAME.*;"}], "answer": "A", "answerText": "package PACKAGE_NAME;"}, {"id": 40, "week": 4, "question": "Which of these access specifiers must be used for the main() method?", "options": [{"key": "A", "text": "private"}, {"key": "B", "text": "public"}, {"key": "C", "text": "protected"}, {"key": "D", "text": "Default"}], "answer": "B", "answerText": "public"}, {"id": 41, "week": 5, "question": "Which keyword is NOT used by Java during exception handling?", "options": [{"key": "A", "text": "try"}, {"key": "B", "text": "catch"}, {"key": "C", "text": "final"}, {"key": "D", "text": "finally"}], "answer": "C", "answerText": "final"}, {"id": 42, "week": 5, "question": "What is the purpose of the throws keyword in Java?", "options": [{"key": "A", "text": "To declare exceptions that a method can throw"}, {"key": "B", "text": "To throw an exception immediately"}, {"key": "C", "text": "To catch an exception"}, {"key": "D", "text": "It is not a keyword in Java"}], "answer": "A", "answerText": "To declare exceptions that a method can throw"}, {"id": 43, "week": 5, "question": "Which of the following is TRUE about interfaces in Java?", "options": [{"key": "A", "text": "Interfaces should always be defined as final."}, {"key": "B", "text": "Interfaces can be instantiated directly."}, {"key": "C", "text": "Interfaces can extend multiple interfaces."}, {"key": "D", "text": "Interfaces cannot have any method signatures."}], "answer": "C", "answerText": "Interfaces can extend multiple interfaces."}, {"id": 44, "week": 5, "question": "What will be the output of the following code? interface Demo { void display(); } class Test implements Demo { public void display() { System.out.println(\"Hello, NPTEL!\"); } } public class Main { public static void main(String[] args) { Test obj = new Test(); obj.display(); } }", "options": [{"key": "A", "text": "Hello, NPTEL!"}, {"key": "B", "text": "Compilation Error"}, {"key": "C", "text": "Runtime Error"}, {"key": "D", "text": "No Output"}], "answer": "A", "answerText": "Hello, NPTEL!"}, {"id": 45, "week": 5, "question": "What will be the output of the following Java program? interface Calculation { void calculate(int value); } class Square implements Calculation { int result; public void calculate(int value) { result = value * value; System.out.println(\"Square: \" + result); } } class Cube extends Square { public void calculate(int value) { result = value * value * value; super.calculate(value); System.out.println(\"Cube: \" + result); } } public class Main { public static void main(String[] args) { Calculation obj = new Cube(); obj.calculate(3); } }", "options": [{"key": "A", "text": "Square: 9 followed by Cube: 9"}, {"key": "B", "text": "Cube: 27 followed by Square: 9"}, {"key": "C", "text": "Square: 9, Square: 27, Cube: 27"}, {"key": "D", "text": "Square: 9, Cube: 27, Square: 27"}], "answer": "A", "answerText": "Square: 9 followed by Cube: 9"}, {"id": 46, "week": 5, "question": "What will be the output of the following Java program? class Main { public static void main(String[] args) { try { int a = 5; int b = 0; System.out.println(a / b); } catch (ArithmeticException e) { System.out.print(\"Error \"); } finally { System.out.print(\"Completed\"); } } }", "options": [{"key": "A", "text": "5 Completed"}, {"key": "B", "text": "Error Completed"}, {"key": "C", "text": "Runtime Error"}, {"key": "D", "text": "Compilation Error"}], "answer": "B", "answerText": "Error Completed"}, {"id": 47, "week": 5, "question": "What will be the output of the following Java program? interface A { int x = 10; void display(); } class B implements A { public void display() { System.out.println(\"Value of x: \" + x); } } public class Main { public static void main(String[] args) { B obj = new B(); obj.display(); } }", "options": [{"key": "A", "text": "Value of x: 10"}, {"key": "B", "text": "Value of x: 0"}, {"key": "C", "text": "Compilation Error"}, {"key": "D", "text": "Runtime Error"}], "answer": "A", "answerText": "Value of x: 10"}, {"id": 48, "week": 5, "question": "Which keyword is used by Java during exception handling?", "options": [{"key": "A", "text": "final"}, {"key": "B", "text": "finally"}, {"key": "C", "text": "caught"}, {"key": "D", "text": "finished"}], "answer": "B", "answerText": "finally"}, {"id": 49, "week": 5, "question": "A method that potentially generates a checked exception must include which keyword in its method signature?", "options": [{"key": "A", "text": "throw"}, {"key": "B", "text": "extend"}, {"key": "C", "text": "throws"}, {"key": "D", "text": "extends"}], "answer": "C", "answerText": "throws"}, {"id": 50, "week": 5, "question": "Consider the following Java program. class Test extends Exception { } class Main { public static void main(String[] args) { try { throw new Test(); } catch (Test e) { System.out.println(\"Got the Test Exception\"); } finally { System.out.println(\"Inside finally block\"); } } } What will be the output of the above code?", "options": [{"key": "A", "text": "Got the Test Exception, followed by Inside finally block"}, {"key": "B", "text": "Got the Test Exception only"}, {"key": "C", "text": "Inside finally block only"}, {"key": "D", "text": "Compiler Error"}], "answer": "A", "answerText": "Got the Test Exception, followed by Inside finally block"}, {"id": 51, "week": 6, "question": "What is the primary difference between Byte Streams and Character Streams in Java?", "options": [{"key": "A", "text": "Byte Streams handle characters, while Character Streams handle bytes."}, {"key": "B", "text": "Byte Streams are used for binary data, while Character Streams are used for decimal data."}, {"key": "C", "text": "Character Streams are faster than Byte Streams in all cases."}, {"key": "D", "text": "Byte Streams are used for binary data, while Character Streams are used for text data."}], "answer": "D", "answerText": "Byte Streams are used for binary data, while Character Streams are used for text data."}, {"id": 52, "week": 6, "question": "Which of the following best describes the concept of multithreading in Java?", "options": [{"key": "A", "text": "Multiple threads execute concurrently, sharing the same memory space."}, {"key": "B", "text": "Only one thread executes at a time, ensuring sequential execution."}, {"key": "C", "text": "Threads in Java cannot communicate with each other."}, {"key": "D", "text": "Threads require separate memory allocation for each thread to run."}], "answer": "A", "answerText": "Multiple threads execute concurrently, sharing the same memory space."}, {"id": 53, "week": 6, "question": "Consider the code given below. class ExampleThread extends Thread { public void run() { System.out.println(\"Thread is running.\"); } } public class Main { public static void main(String[] args) { ExampleThread thread = new ExampleThread(); thread.start(); //thread.start(); } } What will happen when the above code is executed?", "options": [{"key": "A", "text": "The program will execute successfully, printing \"Thread is running.\" twice."}, {"key": "B", "text": "The program will throw an error when attempting to start the thread a second time."}, {"key": "C", "text": "The program will terminate without any output."}, {"key": "D", "text": "The program will execute successfully, printing \"Thread is running.\""}], "answer": "D", "answerText": "The program will execute successfully, printing \"Thread is running.\""}, {"id": 54, "week": 6, "question": "Which method is used to start a thread in Java?", "options": [{"key": "A", "text": "run()"}, {"key": "B", "text": "start()"}, {"key": "C", "text": "execute()"}, {"key": "D", "text": "begin()"}], "answer": "B", "answerText": "start()"}, {"id": 55, "week": 6, "question": "Consider the code given below. class RunnableExample implements Runnable { public void run() { for (int i = 1; i <= 3; i++) { System.out.println(\"Thread running: \" + i); } } } public class Main { public static void main(String[] args) { RunnableExample task = new RunnableExample(); Thread thread = new Thread(task); thread.start(); } } What will happen when the above code is executed?", "options": [{"key": "A", "text": "The program will throw a compile-time error because Runnable is not a thread."}, {"key": "B", "text": "The program will execute successfully, and the run() method will run in a new thread."}, {"key": "C", "text": "The program will execute the run() method directly on the main thread."}, {"key": "D", "text": "The program will throw a runtime error because Runnable is not properly implemented."}], "answer": "B", "answerText": "The program will execute successfully, and the run() method will run in a new thread."}, {"id": 56, "week": 6, "question": "Which of the following states can a thread enter during its lifecycle in Java?", "options": [{"key": "A", "text": "New, Runnable, Running, Blocked"}, {"key": "B", "text": "New, Runnable, Waiting, Blocked"}, {"key": "C", "text": "New, Runnable, Running, Sleeping, Dead"}, {"key": "D", "text": "New, Runnable, Waiting, Blocked, Terminated"}], "answer": "D", "answerText": "New, Runnable, Waiting, Blocked, Terminated"}, {"id": 57, "week": 6, "question": "What does the thread scheduler use to decide which thread to run when multiple threads are in the runnable state?", "options": [{"key": "A", "text": "Thread priority"}, {"key": "B", "text": "Thread execution time"}, {"key": "C", "text": "Thread name"}, {"key": "D", "text": "Thread creation order"}], "answer": "A", "answerText": "Thread priority"}, {"id": 58, "week": 6, "question": "Consider the code given below. class PriorityExample extends Thread { public void run() { System.out.println( Thread.currentThread().getName() + \" with priority \" + Thread.currentThread().getPriority() ); } } public class Main { public static void main(String[] args) { PriorityExample t1 = new PriorityExample(); PriorityExample t2 = new PriorityExample(); t1.setPriority(Thread.MIN_PRIORITY); t2.setPriority(Thread.MAX_PRIORITY); t1.start(); t2.start(); } } Which of the following is true about the output?", "options": [{"key": "A", "text": "The thread with the higher priority is guaranteed to execute first."}, {"key": "B", "text": "The thread with the lower priority will never execute."}, {"key": "C", "text": "The order of execution depends on the JVM and OS scheduling policies."}, {"key": "D", "text": "The program will throw an error due to invalid priority values."}], "answer": "C", "answerText": "The order of execution depends on the JVM and OS scheduling policies."}, {"id": 59, "week": 6, "question": "Consider the code given below. class PriorityExample extends Thread { public void run() { System.out.println( Thread.currentThread().getName() + \" with priority \" + Thread.currentThread().getPriority() ); } } public class Main { public static void main(String[] args) { PriorityExample t1 = new PriorityExample(); PriorityExample t2 = new PriorityExample(); t1.setPriority(Thread.MIN_PRIORITY); t2.setPriority(Thread.MAX_PRIORITY); t1.start(); t2.start(); } } Which of the following is true about the output?", "options": [{"key": "A", "text": "The thread with the higher priority is guaranteed to execute first."}, {"key": "B", "text": "The thread with the lower priority will never execute."}, {"key": "C", "text": "The order of execution depends on the JVM and OS scheduling policies."}, {"key": "D", "text": "The program will throw an error due to invalid priority values."}], "answer": "D", "answerText": "The program will throw an error due to invalid priority values."}, {"id": 60, "week": 6, "question": "Which of the following methods returns a reference to the currently executing thread object?", "options": [{"key": "A", "text": "public static boolean isInterrupted()"}, {"key": "B", "text": "public static Thread currentThread()"}, {"key": "C", "text": "public final boolean isAlive()"}, {"key": "D", "text": "public final void suspend()"}], "answer": "B", "answerText": "public static Thread currentThread()"}, {"id": 61, "week": 7, "question": "What will be the output of the following Java program? import java.io.*; class Main { public static void main(String[] args) throws IOException { FileReader fr = new FileReader(\"NPTEL.txt\"); BufferedReader br = new BufferedReader(fr); System.out.println(br.readLine()); br.close(); } } Assume NPTEL.txt contains: This is Programming in Java online course.", "options": [{"key": "A", "text": "Hello, World!"}, {"key": "B", "text": "This is Programming in Java online course."}, {"key": "C", "text": "IOException"}, {"key": "D", "text": "null"}], "answer": "B", "answerText": "This is Programming in Java online course."}, {"id": 62, "week": 7, "question": "Complete the following snippet with the required code.Program import java.io.*; class Main { public static void main(String[] args) { File f = new File(\"NPTEL.txt\"); if (________________) { System.out.println(\"File exists\"); } else { System.out.println(\"File does not exist\"); } } }", "options": [{"key": "A", "text": "f.exists()"}, {"key": "B", "text": "f.isFile()"}, {"key": "C", "text": "File.FileExists()"}, {"key": "D", "text": "File.isAvailable()"}], "answer": "A", "answerText": "f.exists()"}, {"id": 63, "week": 7, "question": "What is the output of the following Java program? class Main { public static void main(String args[]) { final int i; i = 20; i = 30; System.out.println(i); } }", "options": [{"key": "A", "text": "30"}, {"key": "B", "text": "Compiler Error"}, {"key": "C", "text": "Garbage value"}, {"key": "D", "text": "0"}], "answer": "B", "answerText": "Compiler Error"}, {"id": 64, "week": 7, "question": "Which of these values is returned by the read() method when the end of file (EOF) is encountered?", "options": [{"key": "A", "text": "0"}, {"key": "B", "text": "1"}, {"key": "C", "text": "-1"}, {"key": "D", "text": "Null"}], "answer": "C", "answerText": "-1"}, {"id": 65, "week": 7, "question": "What will be the output of the following Java program? public class Calculator { int num = 100; public void calc(int num) { this.num = num * 10; } public void printNum() { System.out.println(num); } public static void main(String[] args) { Calculator obj = new Calculator(); obj.calc(2); obj.printNum(); } }", "options": [{"key": "A", "text": "20"}, {"key": "B", "text": "100"}, {"key": "C", "text": "1000"}, {"key": "D", "text": "2"}], "answer": "A", "answerText": "20"}, {"id": 66, "week": 7, "question": "What is the primary difference between Byte Streams and Character Streams in Java?", "options": [{"key": "A", "text": "Byte Streams handle characters, while Character Streams handle bytes."}, {"key": "B", "text": "Byte Streams are used for binary data, while Character Streams are used for image data."}, {"key": "C", "text": "Character Streams are faster than Byte Streams in all cases."}, {"key": "D", "text": "Byte Streams are used for binary data, while Character Streams are used for text data."}], "answer": "D", "answerText": "Byte Streams are used for binary data, while Character Streams are used for text data."}, {"id": 67, "week": 7, "question": "What is the primary purpose of thread synchronization in Java?", "options": [{"key": "A", "text": "To allow multiple threads to execute a method at the same time."}, {"key": "B", "text": "To ensure thread execution follows a specific order."}, {"key": "C", "text": "To ensure data inconsistency."}, {"key": "D", "text": "To prevent race conditions and ensure data consistency."}], "answer": "D", "answerText": "To prevent race conditions and ensure data consistency."}, {"id": 68, "week": 7, "question": "Which stream does a Java application use to only READ data from a source? It may be a file, an array, a peripheral device, or a socket.", "options": [{"key": "A", "text": "InputStream"}, {"key": "B", "text": "OutputStream"}, {"key": "C", "text": "InputOutputStream"}, {"key": "D", "text": "DataOutputStream"}], "answer": "A", "answerText": "InputStream"}, {"id": 69, "week": 7, "question": "Which class in Java is used to create a new directory?", "options": [{"key": "A", "text": "FileReader"}, {"key": "B", "text": "FileWriter"}, {"key": "C", "text": "File"}, {"key": "D", "text": "Directory"}], "answer": "C", "answerText": "File"}, {"id": 70, "week": 7, "question": "What is the primary purpose of input streams in Java?", "options": [{"key": "A", "text": "To write data to a file."}, {"key": "B", "text": "To read data from a file."}, {"key": "C", "text": "To delete a file."}, {"key": "D", "text": "To create directories."}], "answer": "B", "answerText": "To read data from a file."}, {"id": 71, "week": 8, "question": "Which of the following is TRUE about check boxes and radio buttons?", "options": [{"key": "A", "text": "Check boxes allow only one selection, while radio buttons allow multiple selections."}, {"key": "B", "text": "Check boxes allow multiple selections, while radio buttons allow only one selection."}, {"key": "C", "text": "Both allow only one selection."}, {"key": "D", "text": "Both allow multiple selections."}], "answer": "B", "answerText": "Check boxes allow multiple selections, while radio buttons allow only one selection."}, {"id": 72, "week": 8, "question": "Which layout manager arranges components in a rectangular grid?", "options": [{"key": "A", "text": "FlowLayout"}, {"key": "B", "text": "CardLayout"}, {"key": "C", "text": "BorderLayout"}, {"key": "D", "text": "GridLayout"}], "answer": "D", "answerText": "GridLayout"}, {"id": 73, "week": 8, "question": "Which method is used to set the title of a Frame in Java?", "options": [{"key": "A", "text": "setTitle()"}, {"key": "B", "text": "setName()"}, {"key": "C", "text": "setText()"}, {"key": "D", "text": "setLabel()"}], "answer": "A", "answerText": "setTitle()"}, {"id": 74, "week": 8, "question": "Which method is used to request that a component be repainted in Java?", "options": [{"key": "A", "text": "paint()"}, {"key": "B", "text": "repaint()"}, {"key": "C", "text": "update()"}, {"key": "D", "text": "draw()"}], "answer": "B", "answerText": "repaint()"}, {"id": 75, "week": 8, "question": "Which AWT component is used to display a scrolling list of items?", "options": [{"key": "A", "text": "Label"}, {"key": "B", "text": "List"}, {"key": "C", "text": "Button"}, {"key": "D", "text": "TextField"}], "answer": "B", "answerText": "List"}, {"id": 76, "week": 8, "question": "Which layout manager arranges components in a flow, placing them one after another?", "options": [{"key": "A", "text": "FlowLayout"}, {"key": "B", "text": "BorderLayout"}, {"key": "C", "text": "GridLayout"}, {"key": "D", "text": "CardLayout"}], "answer": "A", "answerText": "FlowLayout"}, {"id": 77, "week": 8, "question": "What does \"AWT\" stand for in Java?", "options": [{"key": "A", "text": "Abstract Widget Toolkit"}, {"key": "B", "text": "Advanced Window Toolkit"}, {"key": "C", "text": "Abstract Window Toolkit"}, {"key": "D", "text": "Advanced Widget Toolkit"}], "answer": "C", "answerText": "Abstract Window Toolkit"}, {"id": 78, "week": 8, "question": "Which AWT component is used to create a button in a GUI?", "options": [{"key": "A", "text": "Label"}, {"key": "B", "text": "Button"}, {"key": "C", "text": "TextField"}, {"key": "D", "text": "Checkbox"}], "answer": "B", "answerText": "Button"}, {"id": 79, "week": 8, "question": "Which of the following correctly describes the GUI shown below? GUI box from your video The GUI contains two rows: First Name and Last Name, each with a text input field.", "options": [{"key": "A", "text": "It contains two Labels and one TextField."}, {"key": "B", "text": "It contains one Frame, two Labels, and two TextFields."}, {"key": "C", "text": "It contains two Frames, two Labels, and two TextFields."}, {"key": "D", "text": "It contains one Frame, two Buttons, and two TextFields."}], "answer": "B", "answerText": "It contains one Frame, two Labels, and two TextFields."}, {"id": 80, "week": 8, "question": "Which of the following is TRUE about a check box in Java?", "options": [{"key": "A", "text": "A check box cannot be in the on or off state."}, {"key": "B", "text": "Clicking a check box changes its state between on and off."}, {"key": "C", "text": "A check box can be on and off at the same time."}, {"key": "D", "text": "A check box cannot be grouped with other check boxes."}], "answer": "B", "answerText": "Clicking a check box changes its state between on and off."}, {"id": 81, "week": 9, "question": "The container displays a number of components in a row, but adjusts according to the window size. Which of the following layout manager(s) is most naturally suited for the layout given above?", "options": [{"key": "A", "text": "FlowLayout"}, {"key": "B", "text": "BorderLayout"}, {"key": "C", "text": "GridLayout"}, {"key": "D", "text": "BoxLayout"}], "answer": "A", "answerText": "FlowLayout"}, {"id": 82, "week": 9, "question": "In Java, what is the primary purpose of a layout manager?", "options": [{"key": "A", "text": "To manage memory allocation"}, {"key": "B", "text": "To arrange GUI components within a container"}, {"key": "C", "text": "To handle exception handling"}, {"key": "D", "text": "To control database connections"}], "answer": "B", "answerText": "To arrange GUI components within a container"}, {"id": 83, "week": 9, "question": "Consider the following code. What happens when the button in this Java code snippet is clicked? Program : import javax.swing.*; import java.awt.event.*; public class NPTEL { public static void main(String[] args) { JFrame frame = new JFrame(\"NPTEL Java Course\"); JButton button = new JButton(\"Click Me\"); button.setBounds(80, 100, 100, 40); button.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) { JOptionPane.showMessageDialog( null, \"Welcome to the course\" ); } }); frame.add(button); frame.setSize(300, 300); frame.setLayout(null); frame.setVisible(true); } }", "options": [{"key": "A", "text": "The program exits."}, {"key": "B", "text": "A message dialog with the text \"Welcome to the course\" is displayed."}, {"key": "C", "text": "The button label changes to \"Welcome to the course\"."}, {"key": "D", "text": "Nothing happens."}], "answer": "B", "answerText": "A message dialog with the text \"Welcome to the course\" is displayed."}, {"id": 84, "week": 9, "question": "Consider the following code. What will be the output of the above code? Program: import javax.swing.*; public class NPTEL extends JFrame { JButton button; public NPTEL() { button = new JButton(\"Programming in Java\"); add(button); setSize(300, 200); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); setVisible(true); } public static void main(String[] args) { new NPTEL(); } }", "options": [{"key": "A", "text": "Creates a JFrame with a JButton labeled \"Programming in Java\""}, {"key": "B", "text": "Compiles with error"}, {"key": "C", "text": "Displays a message dialog"}, {"key": "D", "text": "Creates a JPanel with a JButton labeled \"Programming in Java\""}], "answer": "A", "answerText": "Creates a JFrame with a JButton labeled \"Programming in Java\""}, {"id": 85, "week": 9, "question": "Consider the following code. What should replace // INSERT CODE HERE to create a JFrame with a JButton labeled \"Click Me\"? Program: import javax.swing.*; public class FrameExample { public static void main(String[] args) { JFrame frame = new JFrame(\"Demo Frame\"); JButton button = new JButton(\"Click Me\"); // INSERT CODE HERE frame.setSize(300, 200); frame.setVisible(true); } }", "options": [{"key": "A", "text": "frame.add(button);"}, {"key": "B", "text": "frame.insert(button);"}, {"key": "C", "text": "frame.append(button);"}, {"key": "D", "text": "frame.push(button);"}], "answer": "A", "answerText": "frame.add(button);"}, {"id": 86, "week": 9, "question": "Identify and correct the error in the following program. What should the erroneous line panel.setFlowLayout(); be replaced with? Program: import javax.swing.*; import java.awt.*; public class panelExample { public static void main(String[] args) { JFrame frame = new JFrame(\"Panel Example\"); JPanel panel = new JPanel(); JButton button = new JButton(\"Submit\"); panel.setFlowLayout(); // ERROR panel.add(button); frame.add(panel); frame.setSize(300, 200); frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); frame.setVisible(true); } }", "options": [{"key": "A", "text": "panel.setLayout(new);"}, {"key": "B", "text": "panel.addFlowLayout();"}, {"key": "C", "text": "panel.appendLayout(new FlowLayout());"}, {"key": "D", "text": "panel.setLayout(new FlowLayout());"}], "answer": "D", "answerText": "panel.setLayout(new FlowLayout());"}, {"id": 87, "week": 9, "question": "Which method is used to remove a component from a container in AWT?", "options": [{"key": "A", "text": "remove()"}, {"key": "B", "text": "deleteComponent()"}, {"key": "C", "text": "removeComponent()"}, {"key": "D", "text": "destroy()"}], "answer": "A", "answerText": "remove()"}, {"id": 88, "week": 9, "question": "Which method is used to handle mouse click events in Java Swing?", "options": [{"key": "A", "text": "mouseClicked()"}, {"key": "B", "text": "keyPressed()"}, {"key": "C", "text": "actionPerformed()"}, {"key": "D", "text": "componentShown()"}], "answer": "A", "answerText": "mouseClicked()"}, {"id": 89, "week": 9, "question": "Which Swing component is best suited for displaying a drop-down list of selectable options?", "options": [{"key": "A", "text": "JButton"}, {"key": "B", "text": "JComboBox"}, {"key": "C", "text": "JTextField"}, {"key": "D", "text": "JPanel"}], "answer": "B", "answerText": "JComboBox"}, {"id": 90, "week": 9, "question": "Which of the following functions is used to specify the layout of a container?", "options": [{"key": "A", "text": "useLayout()"}, {"key": "B", "text": "setLayout()"}, {"key": "C", "text": "layout()"}, {"key": "D", "text": "designLayout()"}], "answer": "B", "answerText": "setLayout()"}, {"id": 91, "week": 10, "question": "Which Swing component is used to display a window?", "options": [{"key": "A", "text": "JFrame"}, {"key": "B", "text": "JButton"}, {"key": "C", "text": "JLabel"}, {"key": "D", "text": "JTextField"}], "answer": "A", "answerText": "JFrame"}, {"id": 92, "week": 10, "question": "Which Swing component is used to enter a single line of text?", "options": [{"key": "A", "text": "JButton"}, {"key": "B", "text": "JLabel"}, {"key": "C", "text": "JTextField"}, {"key": "D", "text": "JPanel"}], "answer": "C", "answerText": "JTextField"}, {"id": 93, "week": 10, "question": "Which Swing component is commonly used to display non-editable text?", "options": [{"key": "A", "text": "JLabel"}, {"key": "B", "text": "JButton"}, {"key": "C", "text": "JFrame"}, {"key": "D", "text": "JTextField"}], "answer": "A", "answerText": "JLabel"}, {"id": 94, "week": 10, "question": "Which JDBC interface is used to execute SQL statements?", "options": [{"key": "A", "text": "ResultSet"}, {"key": "B", "text": "Statement"}, {"key": "C", "text": "Connection"}, {"key": "D", "text": "DriverManager"}], "answer": "B", "answerText": "Statement"}, {"id": 95, "week": 10, "question": "Which JDBC object contains the result of a SELECT query?", "options": [{"key": "A", "text": "Connection"}, {"key": "B", "text": "Statement"}, {"key": "C", "text": "ResultSet"}, {"key": "D", "text": "DriverManager"}], "answer": "C", "answerText": "ResultSet"}, {"id": 96, "week": 10, "question": "Which JDBC class is used to establish a database connection?", "options": [{"key": "A", "text": "DriverManager"}, {"key": "B", "text": "ResultSet"}, {"key": "C", "text": "Statement"}, {"key": "D", "text": "Scanner"}], "answer": "A", "answerText": "DriverManager"}, {"id": 97, "week": 10, "question": "Which Java class is used to connect a client to a server?", "options": [{"key": "A", "text": "ServerSocket"}, {"key": "B", "text": "Socket"}, {"key": "C", "text": "URL"}, {"key": "D", "text": "NetworkInterface"}], "answer": "B", "answerText": "Socket"}, {"id": 98, "week": 10, "question": "Which class is used by a server to listen for client connections?", "options": [{"key": "A", "text": "Socket"}, {"key": "B", "text": "URL"}, {"key": "C", "text": "ServerSocket"}, {"key": "D", "text": "NetworkInterface"}], "answer": "C", "answerText": "ServerSocket"}, {"id": 99, "week": 10, "question": "Which protocol is used in the URL https://nptel.ac.in/?", "options": [{"key": "A", "text": "FTP"}, {"key": "B", "text": "HTTP"}, {"key": "C", "text": "HTTPS"}, {"key": "D", "text": "SMTP"}], "answer": "C", "answerText": "HTTPS"}, {"id": 100, "week": 10, "question": "Which method of NetworkInterface is used to check whether a network interface is up?", "options": [{"key": "A", "text": "isActive()"}, {"key": "B", "text": "isUp()"}, {"key": "C", "text": "isRunning()"}, {"key": "D", "text": "isConnected()"}], "answer": "B", "answerText": "isUp()"}, {"id": 101, "week": 11, "question": "How do you establish a connection to a database using JDBC?", "options": [{"key": "A", "text": "By creating an instance of the Connection interface"}, {"key": "B", "text": "By using the DriverManager.getConnection() method"}, {"key": "C", "text": "By implementing the Connection interface"}, {"key": "D", "text": "By extending the Connection class"}], "answer": "B", "answerText": "By using the DriverManager.getConnection() method"}, {"id": 102, "week": 11, "question": "Which method executes a simple query and returns a single ResultSet object?", "options": [{"key": "A", "text": "executeQuery()"}, {"key": "B", "text": "executeUpdate()"}, {"key": "C", "text": "execute()"}, {"key": "D", "text": "run()"}], "answer": "A", "answerText": "executeQuery()"}, {"id": 103, "week": 11, "question": "Which of the following ensures that the correct driver is used to access each data source?", "options": [{"key": "A", "text": "java.sql.Manager"}, {"key": "B", "text": "java.sql.DriverManager"}, {"key": "C", "text": "java.sql.Statement"}, {"key": "D", "text": "java.sql.DriverSession"}], "answer": "B", "answerText": "java.sql.DriverManager"}, {"id": 104, "week": 11, "question": "What is the purpose of the ResultSet interface in JDBC?", "options": [{"key": "A", "text": "To store the result of a query"}, {"key": "B", "text": "To execute SQL queries"}, {"key": "C", "text": "To manage database connections"}, {"key": "D", "text": "To update data in the database"}], "answer": "A", "answerText": "To store the result of a query"}, {"id": 105, "week": 11, "question": "What does setAutoCommit(false) do?", "options": [{"key": "A", "text": "Commits transaction after each query"}, {"key": "B", "text": "Explicitly commits transaction"}, {"key": "C", "text": "Does not commit transaction automatically after each query"}, {"key": "D", "text": "Never commits transaction"}], "answer": "C", "answerText": "Does not commit transaction automatically after each query"}, {"id": 106, "week": 11, "question": "Identify the FALSE statement in the following JDBC program Program: Connection con = DriverManager.getConnection( \"jdbc:mysql://localhost:3306/nptel\", \"joy\", \"java\" Which of the following statement is false?", "options": [{"key": "A", "text": "3306 is the default MySQL port"}, {"key": "B", "text": "Database name is nptel"}, {"key": "C", "text": "The database server is hosted on IP 127.0.0.1"}, {"key": "D", "text": "Username is java and password is joy"}], "answer": "D", "answerText": "Username is java and password is joy"}, {"id": 107, "week": 11, "question": "What is the correct order to close database resources?", "options": [{"key": "A", "text": "Connection → Statement → ResultSet"}, {"key": "B", "text": "ResultSet → Statement → Connection"}, {"key": "C", "text": "Statement → Connection → ResultSet"}, {"key": "D", "text": "Statement → ResultSet → Connection"}], "answer": "B", "answerText": "ResultSet → Statement → Connection"}, {"id": 108, "week": 11, "question": "What is the full form of JDBC?", "options": [{"key": "A", "text": "Java Database Connectivity"}, {"key": "B", "text": "Java Data Code"}, {"key": "C", "text": "Java Data Communication"}, {"key": "D", "text": "Java Development Connectivity"}], "answer": "A", "answerText": "Java Database Connectivity"}, {"id": 109, "week": 11, "question": "Fill in the missing code to establish a connection to a MySQL database. import java.sql.*; public class JDBCExample { public static void main(String[] args) { try { Class.forName(\"com.mysql.cj.jdbc.Driver\"); Connection connection = // INSERT CODE HERE; System.out.println(\"Connected to the database.\"); connection.close(); } catch (Exception e) { e.printStackTrace(); } } }", "options": [{"key": "A", "text": "DriverManager.connect(\"mysql:localhost:mydb\", \"user\", \"password\");"}, {"key": "B", "text": "DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"}, {"key": "C", "text": "Connection.get(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"}, {"key": "D", "text": "Driver.connect(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"}], "answer": "B", "answerText": "DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"}, {"id": 110, "week": 11, "question": "What is the purpose of the DriverManager class in JDBC?", "options": [{"key": "A", "text": "To manage database connections"}, {"key": "B", "text": "To execute SQL queries"}, {"key": "C", "text": "To fetch data from a database"}, {"key": "D", "text": "To represent a database record"}], "answer": "A", "answerText": "To manage database connections"}, {"id": 111, "week": 12, "question": "Which method returns the number of characters in a Java String?", "options": [{"key": "A", "text": "size()"}, {"key": "B", "text": "length()"}, {"key": "C", "text": "count()"}, {"key": "D", "text": "getSize()"}], "answer": "B", "answerText": "length()"}, {"id": 112, "week": 12, "question": "Which method is used to get a character at a specified position in a String?", "options": [{"key": "A", "text": "charAt()"}, {"key": "B", "text": "getChar()"}, {"key": "C", "text": "characterAt()"}, {"key": "D", "text": "getAt()"}], "answer": "A", "answerText": "charAt()"}, {"id": 113, "week": 12, "question": "Which keyword is used to create a subclass in Java?", "options": [{"key": "A", "text": "implements"}, {"key": "B", "text": "inherits"}, {"key": "C", "text": "extends"}, {"key": "D", "text": "super"}], "answer": "C", "answerText": "extends"}, {"id": 114, "week": 12, "question": "Which block is executed whether an exception occurs or not?", "options": [{"key": "A", "text": "try"}, {"key": "B", "text": "catch"}, {"key": "C", "text": "throw"}, {"key": "D", "text": "finally"}], "answer": "D", "answerText": "finally"}, {"id": 115, "week": 12, "question": "Which keyword is used to explicitly throw an exception in Java?", "options": [{"key": "A", "text": "throws"}, {"key": "B", "text": "throw"}, {"key": "C", "text": "exception"}, {"key": "D", "text": "catch"}], "answer": "B", "answerText": "throw"}, {"id": 116, "week": 12, "question": "Which keyword is used to indicate that a method may throw an exception?", "options": [{"key": "A", "text": "throw"}, {"key": "B", "text": "throws"}, {"key": "C", "text": "try"}, {"key": "D", "text": "finally"}], "answer": "B", "answerText": "throws"}, {"id": 117, "week": 12, "question": "Which syntax is used to declare an array variable in Java?", "options": [{"key": "A", "text": "()"}, {"key": "B", "text": "{}"}, {"key": "C", "text": "[]"}, {"key": "D", "text": "<>"}], "answer": "C", "answerText": "[]"}, {"id": 118, "week": 12, "question": "Which layout manager arranges components in five regions?", "options": [{"key": "A", "text": "FlowLayout"}, {"key": "B", "text": "BorderLayout"}, {"key": "C", "text": "GridLayout"}, {"key": "D", "text": "BoxLayout"}], "answer": "B", "answerText": "BorderLayout"}, {"id": 119, "week": 12, "question": "Which method is used to register an ActionListener with a JButton?", "options": [{"key": "A", "text": "addActionListener()"}, {"key": "B", "text": "addButtonListener()"}, {"key": "C", "text": "setAction()"}, {"key": "D", "text": "registerAction()"}], "answer": "A", "answerText": "addActionListener()"}, {"id": 120, "week": 12, "question": "Which method of NetworkInterface is used to check whether a network interface is up?", "options": [{"key": "A", "text": "isActive()"}, {"key": "B", "text": "isUp()"}, {"key": "C", "text": "isRunning()"}, {"key": "D", "text": "isConnected()"}], "answer": "B", "answerText": "isUp()"}];
+const $ = id => document.getElementById(id);
+let mode = 'practice';
+let pool = QUESTIONS.map(q => q.id);
+let index = 0;
+let answers = {};
+let sessionAnswers = {};
+let marked = new Set();
+let revealed = new Set();
+let sessionOrder = {};
+let paused = false;
+let seconds = 3600;
+let timerId = null;
+let submitted = false;
+let inReview = false;
+let sessionStart = Date.now();
+let username = (typeof localStorage !== 'undefined' && localStorage.getItem('nptelUsername') || '').trim();
+
+// Restore previous answers and bookmarks if any
+try {
+  const saved = JSON.parse(localStorage.getItem('nptelQuizPro') || '{}');
+  if (saved.answers && typeof saved.answers === 'object') answers = saved.answers;
+  if (Array.isArray(saved.marked)) marked = new Set(saved.marked);
+} catch(e) {
+  answers = {};
+  marked = new Set();
+}
+revealed = new Set();
+
+const shuffle = arr => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+let history = [];
+try {
+  history = JSON.parse(localStorage.getItem('nptelQuizHistory') || '[]');
+} catch(e) {
+  history = [];
+}
+let globalHistory = [];
+let leaderboardMode = 'local'; // 'supabase' | 'server' | 'local'
+const cloudConfigured = !!(typeof window !== 'undefined' && window.NPTEL_SUPABASE_URL && window.NPTEL_SUPABASE_ANON_KEY && window.NPTEL_SUPABASE_URL.startsWith('https://'));
+
+async function loadGlobalLeaderboard() {
+  if (typeof fetch !== 'function') {
+    renderLeaderboard();
+    return;
+  }
+
+  // 1. If Supabase configured, use cloud Supabase
+  if (cloudConfigured) {
+    try {
+      const u = window.NPTEL_SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/quiz_scores?select=username,mode,correct,total,percent,seconds,created_at&order=percent.desc,correct.desc,seconds.asc&limit=25';
+      const r = await fetch(u, {
+        headers: {
+          apikey: window.NPTEL_SUPABASE_ANON_KEY,
+          Authorization: 'Bearer ' + window.NPTEL_SUPABASE_ANON_KEY
+        }
+      });
+      if (r.ok) {
+        globalHistory = await r.json();
+        leaderboardMode = 'supabase';
+        renderLeaderboard();
+        return;
+      }
+    } catch(e) {
+      console.warn('Supabase leaderboard fetch error:', e);
+    }
+  }
+
+  // 2. Multi-laptop shared server API (/api/leaderboard)
+  const apiBase = (typeof window !== 'undefined' && window.location && typeof window.location.origin === 'string' && window.location.origin.startsWith('http'))
+    ? window.location.origin
+    : 'http://localhost:8080';
+
+  try {
+    const r = await fetch(apiBase + '/api/leaderboard');
+    if (r.ok) {
+      const data = await r.json();
+      if (Array.isArray(data)) {
+        globalHistory = data;
+        leaderboardMode = 'server';
+        renderLeaderboard();
+        return;
+      }
+    }
+  } catch(e) {
+    // Offline or static file preview
+  }
+
+  leaderboardMode = 'local';
+  renderLeaderboard();
+}
+
+async function publishScore(entry) {
+  if (typeof fetch !== 'function') return;
+
+  // Publish to Supabase if configured
+  if (cloudConfigured) {
+    try {
+      const u = window.NPTEL_SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/quiz_scores';
+      await fetch(u, {
+        method: 'POST',
+        headers: {
+          apikey: window.NPTEL_SUPABASE_ANON_KEY,
+          Authorization: 'Bearer ' + window.NPTEL_SUPABASE_ANON_KEY,
+          'Content-Type': 'application/json',
+          Prefer: 'return=minimal'
+        },
+        body: JSON.stringify({
+          username: entry.username,
+          mode: entry.mode,
+          correct: entry.correct,
+          total: entry.total,
+          percent: entry.percent,
+          seconds: entry.seconds
+        })
+      });
+    } catch(e) {
+      console.warn('Could not publish score to Supabase:', e);
+    }
+  }
+
+  // Always also publish to server API so any laptop connecting to the server sees it
+  const apiBase = (typeof window !== 'undefined' && window.location && typeof window.location.origin === 'string' && window.location.origin.startsWith('http'))
+    ? window.location.origin
+    : 'http://localhost:8080';
+
+  try {
+    await fetch(apiBase + '/api/leaderboard', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(entry)
+    });
+  } catch(e) {
+    console.warn('Could not publish score to server API:', e);
+  }
+
+  await loadGlobalLeaderboard();
+}
+
+async function clearAllUserData() {
+  if (typeof confirm === 'function' && !confirm('Are you sure you want to clear all existing usernames, scores, and leaderboard history across all laptops?')) {
+    return;
+  }
+
+  // Clear server leaderboard
+  const apiBase = (typeof window !== 'undefined' && window.location && typeof window.location.origin === 'string' && window.location.origin.startsWith('http'))
+    ? window.location.origin
+    : 'http://localhost:8080';
+
+  if (typeof fetch === 'function') {
+    try {
+      await fetch(apiBase + '/api/leaderboard/clear', { method: 'POST' });
+    } catch(e) {
+      console.warn('Server clear failed:', e);
+    }
+  }
+
+  // Clear local storage
+  try {
+    localStorage.removeItem('nptelUsername');
+    localStorage.removeItem('nptelQuizHistory');
+    localStorage.removeItem('nptelQuizPro');
+  } catch(e) {}
+
+  username = '';
+  history = [];
+  globalHistory = [];
+  answers = {};
+  sessionAnswers = {};
+  marked.clear();
+  revealed.clear();
+
+  const profileEl = $('profileName');
+  if (profileEl) profileEl.textContent = 'Set username';
+  const avatarEl = $('avatarLetter');
+  if (avatarEl) avatarEl.textContent = 'N';
+
+  renderLeaderboard();
+  updateStats();
+  renderNumbers();
+  render();
+
+  if (typeof alert === 'function') {
+    alert('All usernames and leaderboard data have been cleared!');
+  }
+  setUsername();
+}
+
+function saveHistory(entry) {
+  history.unshift(entry);
+  history = history.slice(0, 25);
+  localStorage.setItem('nptelQuizHistory', JSON.stringify(history));
+  renderLeaderboard();
+  publishScore(entry);
+}
+
+function videoFor(percent) {
+  if (percent < 50) return 'reaction-below-50.mp4';
+  if (percent >= 60 && percent <= 70) return 'reaction-60-70.mp4';
+  if (percent >= 80 && percent <= 90) return 'reaction-80-90.mp4';
+  if (percent === 100) return 'reaction-perfect.mp4';
+  return null;
+}
+
+function rewardLabel(percent) {
+  if (percent < 50) return 'Reaction Clip Unlocked · Pashi randa!';
+  if (percent >= 50 && percent <= 59) return 'School ke po erripuva!';
+  if (percent >= 60 && percent <= 70) return '60–70% Clip · School ke po erripuva!';
+  if (percent >= 71 && percent <= 79) return 'Dehradun bey dehradun!';
+  if (percent >= 80 && percent <= 90) return '80–90% Clip · Dehradun bey dehradun!';
+  if (percent >= 91 && percent < 100) return 'Dehradun bey dehradun!';
+  if (percent === 100) return '100% Mentalist Reward · My name is Patrick Jane!';
+  return 'Keep practising';
+}
+
+function formatElapsed(sec) {
+  sec = Number(sec) || 0;
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  if (m === 0) return `${s}s`;
+  return `${m}m ${s}s`;
+}
+
+function formatClock(totalSec) {
+  totalSec = Math.max(0, Math.floor(totalSec));
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = totalSec % 60;
+  if (h > 0) {
+    return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  }
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  }[c]));
+}
+
+function buildLeaderboardTable(rows, isLocalOnly) {
+  if (!rows || !rows.length) {
+    return `
+      <div class="tip" style="text-align:center;padding:26px">
+        <div style="font-size:26px;margin-bottom:8px">🏁</div>
+        <b>No completed attempts yet.</b><br>
+        Finish a quiz or mock test to appear on the leaderboard!
+      </div>
+    `;
+  }
+  const sorted = [...rows].sort((a, b) =>
+    (Number(b.percent) || 0) - (Number(a.percent) || 0) ||
+    (Number(b.correct) || 0) - (Number(a.correct) || 0) ||
+    (Number(a.seconds) || 0) - (Number(b.seconds) || 0)
+  ).slice(0, 25);
+
+  return `
+    <div style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:48px">Rank</th>
+            <th>Username</th>
+            <th>Mode</th>
+            <th>Score</th>
+            <th>Time</th>
+            <th>Reward</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${sorted.map((h, i) => {
+            const pct = Number(h.percent) || 0;
+            const src = videoFor(pct);
+            const rewardHtml = src
+              ? `<div style="display:flex;align-items:center;gap:8px">
+                   <video class="leader-video" src="${src}" controls playsinline preload="metadata" aria-label="Reward clip for ${escapeHtml(h.username || 'Student')}" onerror="this.style.display='none'"></video>
+                   <span class="sub" style="font-size:11px;font-weight:600">${pct === 100 ? 'Mentalist 100%' : pct + '% Clip'}</span>
+                 </div>`
+              : `<span class="sub" style="font-size:12px">${escapeHtml(rewardLabel(pct))}</span>`;
+
+            return `
+              <tr>
+                <td><span class="rank-pill">${i + 1}</span></td>
+                <td><b style="color:var(--ink)">${escapeHtml(h.username || 'Student')}</b></td>
+                <td><span class="sub">${escapeHtml(h.mode || 'Practice')}</span></td>
+                <td>
+                  <strong style="color:${pct >= 80 ? 'var(--green)' : pct >= 50 ? 'var(--blue)' : 'var(--red)'}">${pct}%</strong>
+                  <div class="sub">${Number(h.correct) || 0}/${Number(h.total) || 0}</div>
+                </td>
+                <td style="font-variant-numeric:tabular-nums">${formatElapsed(h.seconds)}</td>
+                <td>${rewardHtml}</td>
+              </tr>
+            `;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+function renderLeaderboard() {
+  let statusHtml = '';
+  if (leaderboardMode === 'supabase') {
+    statusHtml = `<span style="display:inline-flex;align-items:center;gap:6px;background:#e6fff5;color:#087a5b;padding:4px 10px;border-radius:6px;font-weight:700;font-size:12px">🌐 Multi-Laptop Shared Leaderboard (Supabase Cloud)</span>`;
+  } else if (leaderboardMode === 'server') {
+    statusHtml = `<span style="display:inline-flex;align-items:center;gap:6px;background:#e6fff5;color:#087a5b;padding:4px 10px;border-radius:6px;font-weight:700;font-size:12px">🌐 Multi-Laptop Shared Leaderboard (Live Synced Across Laptops)</span>`;
+  } else {
+    statusHtml = `<span style="display:inline-flex;align-items:center;gap:6px;background:#fff7e6;color:#9b5a04;padding:4px 10px;border-radius:6px;font-weight:700;font-size:12px">💻 Local Leaderboard (This Browser Only)</span>`;
+  }
+
+  const status = $('leaderboardStatus');
+  if (status) status.innerHTML = statusHtml;
+
+  const pageStatus = $('leaderboardPageStatus');
+  if (pageStatus) pageStatus.innerHTML = statusHtml;
+
+  const isShared = (leaderboardMode === 'supabase' || leaderboardMode === 'server');
+  const rows = isShared ? globalHistory : history;
+
+  const body = $('leaderboardBody');
+  if (body) body.innerHTML = buildLeaderboardTable(rows, !isShared);
+
+  const pageBody = $('leaderboardPageBody');
+  if (pageBody) pageBody.innerHTML = buildLeaderboardTable(rows, !isShared);
+}
+
+const qById = id => QUESTIONS.find(q => q.id === id);
+
+function persist() {
+  localStorage.setItem('nptelQuizPro', JSON.stringify({ answers, marked: [...marked] }));
+}
+
+function current() {
+  return qById(pool[index]);
+}
+
+function updateStats() {
+  const attempted = Object.keys(answers).filter(id => answers[id]).length;
+  const correct = Object.entries(answers).filter(([id, a]) => a === qById(+id)?.answer).length;
+  $('totalStat').textContent = QUESTIONS.length;
+  $('attemptStat').textContent = attempted;
+  $('accuracyStat').textContent = attempted ? Math.round((correct / attempted) * 100) + '%' : '—';
+  $('completeStat').textContent = attempted + ' / ' + QUESTIONS.length;
+
+  const currentAttempted = pool.filter(id => (mode === 'mock' ? sessionAnswers[id] : answers[id])).length;
+  $('navCount').textContent = currentAttempted + '/' + pool.length;
+}
+
+function renderNumbers() {
+  const holder = $('numbers');
+  holder.innerHTML = '';
+  pool.forEach((id, i) => {
+    const isAnswered = !!(mode === 'mock' ? sessionAnswers[id] : answers[id]);
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'num' + (i === index ? ' current' : '') + (isAnswered ? ' done' : '') + (marked.has(id) ? ' marked' : '');
+    b.textContent = i + 1;
+    b.title = 'Question ' + (i + 1) + (marked.has(id) ? ' (Marked)' : '') + (isAnswered ? ' (Answered)' : '');
+    b.onclick = () => {
+      index = i;
+      render();
+    };
+    holder.appendChild(b);
+  });
+}
+
+function render() {
+  if (!pool.length) {
+    $('questionArea').innerHTML = '<p style="padding:24px;text-align:center;color:var(--muted)">No questions found for this mode. Try selecting another mode or resetting filters.</p>';
+    return;
+  }
+  const q = current();
+  if (!q) return;
+
+  $('quizTitle').textContent = inReview
+    ? `Reviewing ${mode === 'mock' ? 'Mock Test' : 'Quiz'} Answers`
+    : (mode === 'mock' ? 'NPTEL Mock Test' : mode === 'wrong' ? 'Wrong Answers Practice' : mode === 'bookmarks' ? 'Bookmarked Questions' : 'Java Practice Quiz');
+
+  $('quizSubtitle').textContent = inReview
+    ? `Question ${index + 1} of ${pool.length} · Review mode (All answers revealed)`
+    : (mode === 'mock'
+        ? `Question ${index + 1} of ${pool.length} · Instant answer feedback enabled`
+        : `Question ${index + 1} of ${pool.length}`);
+
+  $('progressLabel').textContent = `Question ${index + 1} of ${pool.length}`;
+  const pct = Math.round(((index + 1) / pool.length) * 100);
+  $('progressPct').textContent = pct + '%';
+  $('progressFill').style.width = pct + '%';
+
+  $('prevBtn').disabled = index === 0;
+  $('nextBtn').textContent = index === pool.length - 1
+    ? (inReview ? 'Back to Results' : (mode === 'mock' ? 'Submit Test →' : 'Finish →'))
+    : 'Next →';
+  $('markBtn').textContent = marked.has(q.id) ? '★ Marked' : '☆ Mark';
+
+  const area = $('questionArea');
+  area.innerHTML = '';
+
+  const label = document.createElement('div');
+  label.className = 'q-label';
+  label.textContent = `WEEK ${q.week} · QUESTION ${q.id}`;
+  area.appendChild(label);
+
+  const stem = document.createElement('p');
+  stem.className = 'q-text';
+  stem.textContent = q.question;
+  area.appendChild(stem);
+
+  const opts = document.createElement('div');
+  opts.className = 'options';
+
+  const selectedKey = (mode === 'mock' ? sessionAnswers[q.id] : answers[q.id]) || answers[q.id];
+  // Instant feedback ONLY in Mock Test or during Review mode
+  const isRevealed = (mode === 'mock' && revealed.has(q.id)) || inReview;
+
+  // Options always in standard order (A, B, C, D) — only questions are jumbled
+  q.options.forEach(o => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'option';
+
+    if (selectedKey === o.key) {
+      b.classList.add('selected');
+    }
+
+    // Instant answer feedback:
+    // Once question is revealed, mark correct option .correct.
+    // If selected option is wrong, mark that option .wrong.
+    if (isRevealed) {
+      if (o.key === q.answer) {
+        b.classList.add('correct');
+      } else if (selectedKey === o.key) {
+        b.classList.add('wrong');
+      }
+    }
+
+    const letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.textContent = o.key;
+    const txt = document.createElement('span');
+    txt.textContent = o.text;
+    b.append(letter, txt);
+
+    // Clicking option triggers choose() unless submitted
+    b.onclick = () => choose(q.id, o.key);
+    opts.appendChild(b);
+  });
+  area.appendChild(opts);
+
+  // Immediate Feedback block
+  if (isRevealed) {
+    const isCorrect = (selectedKey === q.answer);
+    const selectedOption = q.options.find(o => o.key === selectedKey);
+    const selectedText = selectedKey ? (selectedOption ? `${selectedKey}) ${selectedOption.text}` : selectedKey) : 'Not answered';
+    const correctOption = q.options.find(o => o.key === q.answer);
+    const correctText = `${q.answer}) ${q.answerText || (correctOption ? correctOption.text : '')}`;
+
+    const f = document.createElement('div');
+    f.className = 'feedback' + (isCorrect ? '' : ' bad');
+    f.innerHTML = `
+      <strong style="font-size:15px;display:flex;align-items:center;gap:6px">
+        ${isCorrect ? '✓ Correct!' : (selectedKey ? '✗ Incorrect' : '○ Not Answered')}
+      </strong>
+      <div style="margin-top:6px;line-height:1.5">
+        <div><b>Your answer:</b> ${escapeHtml(selectedText)}</div>
+        <div style="margin-top:3px"><b>Correct answer:</b> <span style="font-weight:700">${escapeHtml(correctText)}</span></div>
+      </div>
+    `;
+    area.appendChild(f);
+  }
+
+  renderNumbers();
+  updateStats();
+  persist();
+}
+
+function choose(id, key) {
+  if (submitted) return;
+  // Save answer in both session and global answers
+  answers[id] = key;
+  sessionAnswers[id] = key;
+  if (mode === 'mock') {
+    revealed.add(id);
+  }
+  render();
+}
+
+function setMode(m) {
+  mode = m;
+  submitted = false;
+  inReview = false;
+  paused = false;
+  index = 0;
+  sessionAnswers = {};
+  sessionOrder = {};
+  sessionStart = Date.now();
+
+  if (m === 'wrong') {
+    pool = QUESTIONS.filter(q => answers[q.id] && answers[q.id] !== q.answer).map(q => q.id);
+  } else if (m === 'bookmarks') {
+    pool = QUESTIONS.filter(q => marked.has(q.id)).map(q => q.id);
+  } else {
+    pool = QUESTIONS.map(q => q.id);
+  }
+
+  // Shuffle question order for fresh session (questions are jumbled, options stay in natural order)
+  pool = shuffle(pool);
+
+  if (m === 'mock') {
+    seconds = 7200; // 2 hours
+  } else {
+    seconds = 3600; // 1 hour
+  }
+  revealed.clear();
+
+  $('resultCard').classList.add('hidden');
+  $('leaderboardPage').classList.add('hidden');
+  $('dashboardLeaderboard').classList.remove('hidden');
+  $('quizLayout').classList.remove('hidden');
+  $('heroSection').classList.remove('hidden');
+  $('statsSection').classList.remove('hidden');
+  $('weekFilter').value = 'all';
+  $('numbers').innerHTML = '';
+
+  document.querySelectorAll('nav button').forEach(b => {
+    b.classList.toggle('active', b.dataset.mode === m);
+  });
+
+  render();
+  startTimer();
+}
+
+function startTimer() {
+  clearInterval(timerId);
+  $('timer').textContent = '⏱ ' + formatClock(seconds);
+  timerId = setInterval(() => {
+    if (paused || submitted) return;
+    seconds = Math.max(0, seconds - 1);
+    $('timer').textContent = '⏱ ' + formatClock(seconds);
+    if (seconds === 0) submit();
+  }, 1000);
+}
+
+function submit() {
+  if (submitted) return;
+  submitted = true;
+  clearInterval(timerId);
+
+  const resultAnswers = (mode === 'mock') ? sessionAnswers : answers;
+  const attempted = pool.filter(id => resultAnswers[id]).length;
+  const correct = pool.filter(id => resultAnswers[id] === qById(id).answer).length;
+
+  let percent = pool.length > 0 ? Math.round((correct / pool.length) * 100) : 0;
+  if (correct === pool.length && pool.length > 0) {
+    percent = 100;
+  } else if (percent === 100 && correct < pool.length) {
+    percent = 99;
+  }
+
+  const elapsed = Math.max(0, Math.floor((Date.now() - sessionStart) / 1000));
+
+  saveHistory({
+    username: username || 'Student',
+    mode: mode === 'mock' ? 'Mock Test' : mode === 'wrong' ? 'Wrong Answers' : 'Practice',
+    correct,
+    total: pool.length,
+    percent,
+    seconds: elapsed,
+    date: new Date().toLocaleString()
+  });
+
+  // Mark all questions in session as revealed for review
+  pool.forEach(id => revealed.add(id));
+
+  $('quizLayout').classList.add('hidden');
+  const r = $('resultCard');
+  r.classList.remove('hidden');
+
+  renderResultCard(percent, correct, attempted, pool.length, elapsed);
+}
+
+function renderResultCard(percent, correct, attempted, total, elapsed) {
+  const r = $('resultCard');
+  const rewardSrc = videoFor(percent);
+  const rewardTxt = rewardLabel(percent);
+  const formattedElapsed = formatElapsed(elapsed);
+  const wrong = attempted - correct;
+  const unanswered = total - attempted;
+
+  r.innerHTML = `
+    <div class="eyebrow">TEST COMPLETED</div>
+    <div class="big">${percent}%</div>
+    <h2>${percent === 100 ? 'My name is Patrick Jane!' : percent >= 80 ? 'Dehradun bey dehradun!' : percent >= 50 ? 'School ke po erripuva!' : 'Pashi randa!'}</h2>
+    <p class="sub">You completed ${mode === 'mock' ? 'the Mock Test' : 'this quiz session'} in ${formattedElapsed}.</p>
+    
+    <div class="result-grid">
+      <div style="border-left:4px solid var(--green)">
+        <strong style="color:var(--green)">${correct}</strong>
+        <span>✓ Correct answers</span>
+      </div>
+      <div style="border-left:4px solid var(--red)">
+        <strong style="color:var(--red)">${wrong}</strong>
+        <span>✗ Wrong answers</span>
+      </div>
+      <div style="border-left:4px solid var(--muted)">
+        <strong style="color:var(--muted)">${unanswered}</strong>
+        <span>○ Unanswered</span>
+      </div>
+      <div style="border-left:4px solid var(--blue)">
+        <strong style="color:var(--blue)">${percent}%</strong>
+        <span>🎯 Final score (${correct}/${total})</span>
+      </div>
+    </div>
+
+    <div style="margin:24px 0 14px">
+      <div class="eyebrow" style="color:var(--blue)">REWARD &amp; FEEDBACK</div>
+      <h3 style="margin:6px 0 14px">${escapeHtml(rewardTxt)}</h3>
+      ${rewardSrc ? `
+        <div style="position:relative;max-width:380px;margin:0 auto">
+          <video class="reward-video" id="rewardVideo" src="${rewardSrc}" controls playsinline preload="metadata" aria-label="${escapeHtml(rewardTxt)}"
+            onerror="this.onerror=null; this.insertAdjacentHTML('afterend', '<div class=\\'feedback bad\\' style=\\'margin-top:10px\\'>Reward video could not load (${escapeHtml(rewardSrc)}) — check that the video file is in the deployed assets folder.</div>'); this.style.display='none';">
+          </video>
+          <p class="sub" style="font-size:12px;margin-top:6px">Reward clip unlocked for your score band.</p>
+        </div>
+      ` : `
+        <div class="tip" style="max-width:440px;margin:0 auto;text-align:center">
+          ${percent >= 91 ? '🌟 Remarkable score! You are very close to a perfect 100% Mentalist reward.' : percent >= 71 ? '👍 Solid score! Reach 80%+ on your next attempt to unlock the next video reaction.' : '💪 Consistent practice builds mastery. Review mistakes to improve your score!'}
+        </div>
+      `}
+    </div>
+
+    ${percent === 100 ? `
+      <div class="perfect-wrap">
+        <div class="perfect-copy">
+          <span class="perfect-tag">100% • PERFECT SCORE</span>
+          <h3>My name is Patrick Jane!</h3>
+          <p>Top-rank performance! Your Mentalist poster reward is unlocked.</p>
+        </div>
+        <img src="mentalist-perfect.png" alt="The Mentalist poster reward" onerror="this.onerror=null; this.insertAdjacentHTML('afterend', '<div class=\\'sub\\' style=\\'color:#fff;padding:20px\\'>Mentalist poster could not load.</div>'); this.style.display='none';">
+      </div>
+    ` : ''}
+
+    <div style="margin-top:25px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <button class="btn primary" id="reviewBtn">🔍 Review answers (Step-by-Step)</button>
+      <button class="btn" style="background:#edf3ff;color:#2752cc;border:1px solid #bfdbfe" id="jumpToKeySheetBtn">📋 View Key Evaluation Sheet ↓</button>
+      <button class="btn outline" id="againBtn">↻ Try again</button>
+      <button class="btn outline" id="resultLeaderboardBtn">🏆 View Leaderboard</button>
+    </div>
+
+    <div id="keyEvaluationContainer"></div>
+  `;
+
+  // Autoplay attempt (muted as required by browsers)
+  const vid = $('rewardVideo');
+  if (vid && typeof vid.play === 'function') {
+    vid.muted = true;
+    vid.play().catch(() => {});
+  }
+
+  function updateKeySheet(filter) {
+    const container = $('keyEvaluationContainer');
+    if (!container) return;
+    const resultAnswers = (mode === 'mock') ? sessionAnswers : answers;
+
+    const items = pool.map((id, idx) => {
+      const q = qById(id);
+      if (!q) return null;
+      const userAns = resultAnswers[id];
+      const isCorrect = (userAns === q.answer);
+      const isAnswered = !!userAns;
+      const status = isCorrect ? 'correct' : (isAnswered ? 'wrong' : 'skipped');
+      return { q, idx, userAns, isCorrect, isAnswered, status };
+    }).filter(Boolean);
+
+    const correctCount = items.filter(i => i.isCorrect).length;
+    const wrongCount = items.filter(i => i.isAnswered && !i.isCorrect).length;
+    const skippedCount = items.filter(i => !i.isAnswered).length;
+
+    const filtered = items.filter(it => {
+      if (filter === 'correct') return it.isCorrect;
+      if (filter === 'wrong') return (it.isAnswered && !it.isCorrect);
+      if (filter === 'skipped') return !it.isAnswered;
+      return true;
+    });
+
+    container.innerHTML = `
+      <div class="key-sheet" id="eamcetKeySheet">
+        <div class="key-sheet-head">
+          <div>
+            <div class="eyebrow" style="color:var(--blue)">EAMCET / NPTEL RESPONSE SHEET</div>
+            <div class="key-sheet-title">📝 Key Evaluation &amp; Question Responses</div>
+          </div>
+          <div class="key-filters">
+            <button type="button" class="key-filter-btn ${filter === 'all' ? 'active' : ''}" id="filterKeyAll">All (${items.length})</button>
+            <button type="button" class="key-filter-btn ${filter === 'correct' ? 'active' : ''}" id="filterKeyCorrect" style="color:var(--green)">✓ Correct (${correctCount})</button>
+            <button type="button" class="key-filter-btn ${filter === 'wrong' ? 'active' : ''}" id="filterKeyWrong" style="color:var(--red)">✗ Wrong (${wrongCount})</button>
+            <button type="button" class="key-filter-btn ${filter === 'skipped' ? 'active' : ''}" id="filterKeySkipped">○ Skipped (${skippedCount})</button>
+          </div>
+        </div>
+
+        <div class="key-list">
+          ${filtered.map(it => {
+            const q = it.q;
+            const userOption = q.options.find(o => o.key === it.userAns);
+            const correctOption = q.options.find(o => o.key === q.answer);
+            const userChoiceText = it.userAns ? `${it.userAns}) ${userOption ? userOption.text : ''}` : 'Not Answered / Skipped';
+            const correctKeyText = `${q.answer}) ${correctOption ? correctOption.text : q.answerText || ''}`;
+
+            let cardClass = it.status === 'correct' ? 'card-correct' : (it.status === 'wrong' ? 'card-wrong' : 'card-skipped');
+            let badgeHtml = it.status === 'correct'
+              ? `<span class="key-badge badge-correct">✓ Correct (+1 Mark)</span>`
+              : (it.status === 'wrong'
+                  ? `<span class="key-badge badge-wrong">✗ Wrong Answer (0 Marks)</span>`
+                  : `<span class="key-badge badge-skipped">○ Not Attempted (0 Marks)</span>`);
+
+            return `
+              <div class="key-card ${cardClass}">
+                <div class="key-card-head">
+                  <span style="font-weight:800;font-size:13px;color:#52648e">Question ${it.idx + 1} of ${pool.length} · Week ${q.week} (Q#${q.id})</span>
+                  ${badgeHtml}
+                </div>
+                <p class="key-q-text">${escapeHtml(q.question)}</p>
+                
+                <div class="key-options">
+                  ${q.options.map(o => {
+                    const isUserPick = (it.userAns === o.key);
+                    const isOfficialKey = (q.answer === o.key);
+
+                    let optClass = 'key-opt';
+                    let tag = '';
+
+                    if (isUserPick && isOfficialKey) {
+                      optClass += ' opt-user-correct';
+                      tag = `<span style="margin-left:auto;font-size:11px;font-weight:800;color:#087a5b">✓ Your Answer (Correct)</span>`;
+                    } else if (isUserPick && !isOfficialKey) {
+                      optClass += ' opt-user-wrong';
+                      tag = `<span style="margin-left:auto;font-size:11px;font-weight:800;color:#c73f50">✗ Your Answer (Wrong)</span>`;
+                    } else if (isOfficialKey) {
+                      optClass += ' opt-correct';
+                      tag = `<span style="margin-left:auto;font-size:11px;font-weight:800;color:#087a5b">★ Official Correct Key</span>`;
+                    }
+
+                    return `
+                      <div class="${optClass}">
+                        <span class="letter" style="background:${isOfficialKey ? '#149a75' : (isUserPick ? '#df5967' : '#edf0f7')};color:${(isOfficialKey || isUserPick) ? '#fff' : '#63718f'}">${o.key}</span>
+                        <span style="flex:1">${escapeHtml(o.text)}</span>
+                        ${tag}
+                      </div>
+                    `;
+                  }).join('')}
+                </div>
+
+                <div class="key-status-row">
+                  <div>
+                    <span style="color:var(--muted)">Your Answer:</span>
+                    <strong style="color:${it.isCorrect ? 'var(--green)' : (it.userAns ? 'var(--red)' : 'var(--muted)')}">
+                      ${escapeHtml(userChoiceText)}
+                    </strong>
+                  </div>
+                  <div>
+                    <span style="color:var(--muted)">Official Key:</span>
+                    <strong style="color:var(--green)">${escapeHtml(correctKeyText)}</strong>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+
+    if ($('filterKeyAll')) $('filterKeyAll').onclick = () => updateKeySheet('all');
+    if ($('filterKeyCorrect')) $('filterKeyCorrect').onclick = () => updateKeySheet('correct');
+    if ($('filterKeyWrong')) $('filterKeyWrong').onclick = () => updateKeySheet('wrong');
+    if ($('filterKeySkipped')) $('filterKeySkipped').onclick = () => updateKeySheet('skipped');
+  }
+
+  updateKeySheet('all');
+
+  const jumpBtn = $('jumpToKeySheetBtn');
+  if (jumpBtn) {
+    jumpBtn.onclick = () => {
+      const el = $('eamcetKeySheet');
+      if (el && typeof el.scrollIntoView === 'function') {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+  }
+
+  $('reviewBtn').onclick = () => {
+    inReview = true;
+    submitted = true;
+    index = 0;
+    pool.forEach(id => revealed.add(id));
+    r.classList.add('hidden');
+    $('quizLayout').classList.remove('hidden');
+    render();
+  };
+
+  $('againBtn').onclick = () => {
+    setMode(mode === 'mock' ? 'mock' : 'practice');
+  };
+
+  $('resultLeaderboardBtn').onclick = () => {
+    showLeaderboardPage();
+  };
+}
+
+// Dev helper to simulate score bands for testing
+window.__testResultScreen = function(simPercent) {
+  const total = pool.length || 120;
+  const correct = Math.round((simPercent / 100) * total);
+  $('quizLayout').classList.add('hidden');
+  $('resultCard').classList.remove('hidden');
+  renderResultCard(simPercent, correct, total, total, 125);
+};
+
+$('prevBtn').onclick = () => {
+  if (index > 0) {
+    index--;
+    render();
+  }
+};
+
+$('nextBtn').onclick = () => {
+  if (inReview && index === pool.length - 1) {
+    $('quizLayout').classList.add('hidden');
+    $('resultCard').classList.remove('hidden');
+    return;
+  }
+  if (index < pool.length - 1) {
+    index++;
+    render();
+  } else if (!inReview) {
+    if (confirm('You reached the last question. Submit quiz now?')) {
+      submit();
+    }
+  }
+};
+
+$('markBtn').onclick = () => {
+  const q = current();
+  if (!q) return;
+  marked.has(q.id) ? marked.delete(q.id) : marked.add(q.id);
+  render();
+};
+
+$('submitBtn').onclick = () => {
+  if (confirm('Submit this quiz and view your results?')) submit();
+};
+
+$('pauseBtn').onclick = () => {
+  if (submitted) return;
+  paused = !paused;
+  $('pauseBtn').textContent = paused ? 'Resume' : 'Pause';
+  if (paused) {
+    $('questionArea').style.opacity = '0.2';
+    $('questionArea').style.pointerEvents = 'none';
+  } else {
+    $('questionArea').style.opacity = '1';
+    $('questionArea').style.pointerEvents = 'auto';
+  }
+};
+
+username = (typeof localStorage !== 'undefined' && localStorage.getItem('nptelUsername') || '').trim();
+
+function setUsername() {
+  $('usernameInput').value = username;
+  $('loginError').textContent = '';
+  $('loginTitle').textContent = username ? 'Change your username' : 'Enter your username';
+  if (username) {
+    $('cancelLoginBtn').classList.remove('hidden');
+  } else {
+    $('cancelLoginBtn').classList.add('hidden');
+  }
+  $('loginScreen').classList.remove('hidden');
+  setTimeout(() => $('usernameInput').focus(), 40);
+}
+
+function finishLogin(value) {
+  const clean = String(value || '').trim().replace(/\s+/g, ' ');
+  if (!clean) {
+    $('loginError').textContent = 'Please enter a username.';
+    return false;
+  }
+  if (clean.length < 2 || clean.length > 24) {
+    $('loginError').textContent = 'Username must be between 2 and 24 characters.';
+    return false;
+  }
+  username = clean;
+  localStorage.setItem('nptelUsername', username);
+  $('profileName').textContent = username;
+  $('avatarLetter').textContent = username.slice(0, 1).toUpperCase();
+  $('loginScreen').classList.add('hidden');
+  return true;
+}
+
+$('loginForm').addEventListener('submit', e => {
+  e.preventDefault();
+  finishLogin($('usernameInput').value);
+});
+
+$('cancelLoginBtn').onclick = () => {
+  if (username) {
+    $('loginScreen').classList.add('hidden');
+  }
+};
+
+$('changeNameBtn').onclick = () => setUsername();
+
+function showLeaderboardPage() {
+  $('quizLayout').classList.add('hidden');
+  $('resultCard').classList.add('hidden');
+  $('dashboardLeaderboard').classList.add('hidden');
+  $('heroSection').classList.add('hidden');
+  $('statsSection').classList.add('hidden');
+  $('leaderboardPage').classList.remove('hidden');
+  document.querySelectorAll('nav button').forEach(b => {
+    b.classList.toggle('active', b.id === 'leaderboardNav');
+  });
+  renderLeaderboard();
+  loadGlobalLeaderboard();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function hideLeaderboardPage() {
+  $('leaderboardPage').classList.add('hidden');
+  $('heroSection').classList.remove('hidden');
+  $('statsSection').classList.remove('hidden');
+  $('dashboardLeaderboard').classList.remove('hidden');
+  if (inReview || !submitted) {
+    $('quizLayout').classList.remove('hidden');
+  } else {
+    $('resultCard').classList.remove('hidden');
+  }
+  document.querySelectorAll('nav button').forEach(b => {
+    b.classList.toggle('active', b.dataset.mode === mode);
+  });
+}
+
+$('leaderboardNav').onclick = showLeaderboardPage;
+$('backToQuizBtn').onclick = hideLeaderboardPage;
+
+$('startBtn').onclick = () => {
+  hideLeaderboardPage();
+  setMode('practice');
+  $('quizCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+$('resetBtn').onclick = () => {
+  if (confirm('Reset all saved answers and bookmarks?')) {
+    answers = {};
+    sessionAnswers = {};
+    marked.clear();
+    revealed.clear();
+    persist();
+    setMode('practice');
+  }
+};
+
+document.querySelectorAll('nav button').forEach(b => {
+  if (b.dataset.mode) {
+    b.onclick = () => {
+      hideLeaderboardPage();
+      setMode(b.dataset.mode);
+    };
+  }
+});
+
+for (let w = 1; w <= 12; w++) {
+  const o = document.createElement('option');
+  o.value = w;
+  o.textContent = 'Week ' + w;
+  $('weekFilter').appendChild(o);
+}
+
+$('weekFilter').onchange = () => {
+  const w = $('weekFilter').value;
+  pool = shuffle((w === 'all' ? QUESTIONS : QUESTIONS.filter(q => q.week === +w)).map(q => q.id));
+  index = 0;
+  render();
+};
+
+if ($('clearLeaderboardBtn')) $('clearLeaderboardBtn').onclick = clearAllUserData;
+if ($('pageClearLeaderboardBtn')) $('pageClearLeaderboardBtn').onclick = clearAllUserData;
+if ($('resetUserDataBtn')) $('resetUserDataBtn').onclick = clearAllUserData;
+
+setMode('practice');
+if (!username) {
+  $('loginScreen').classList.remove('hidden');
+} else {
+  finishLogin(username);
+}
+renderLeaderboard();
+loadGlobalLeaderboard();
+
+// Auto refresh leaderboard across connected laptops
+if (typeof setInterval === 'function') {
+  setInterval(() => loadGlobalLeaderboard(), 15000);
+}
+
+window.NPTEL_QUIZ = {
+  get mode() { return mode; },
+  get pool() { return pool; },
+  get index() { return index; },
+  set index(v) { index = v; },
+  get answers() { return answers; },
+  get sessionAnswers() { return sessionAnswers; },
+  get revealed() { return revealed; },
+  get sessionOrder() { return sessionOrder; },
+  get seconds() { return seconds; },
+  get submitted() { return submitted; },
+  get inReview() { return inReview; },
+  get username() { return username; },
+  choose,
+  setMode,
+  render,
+  submit,
+  startTimer,
+  buildLeaderboardTable,
+  videoFor,
+  rewardLabel,
+  finishLogin,
+  setUsername,
+  clearAllUserData,
+  showLeaderboardPage,
+  hideLeaderboardPage,
+  current,
+  qById
+};
+</script>
+</body></html>

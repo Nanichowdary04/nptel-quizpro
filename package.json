@@ -1,0 +1,15 @@
+{
+  "name": "nptel-quizpro",
+  "version": "1.0.0",
+  "description": "NPTEL QuizPro Instant Feedback - Java Exam Prep",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["nptel", "quiz", "java"],
+  "author": "Nanichowdary04",
+  "license": "ISC"
+}

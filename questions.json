@@ -1,0 +1,3002 @@
+[
+  {
+    "id": 1,
+    "week": 1,
+    "question": "Consider the following program. class NPTEL { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } } What is the output of the above code?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hello, World!"
+      },
+      {
+        "key": "B",
+        "text": "HelloWorld!"
+      },
+      {
+        "key": "C",
+        "text": "Compilation Error"
+      },
+      {
+        "key": "D",
+        "text": "Runtime Error"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Hello, World!"
+  },
+  {
+    "id": 2,
+    "week": 1,
+    "question": "A Java file with the extension .class contains:",
+    "options": [
+      {
+        "key": "A",
+        "text": "Java source code"
+      },
+      {
+        "key": "B",
+        "text": "HTML tags"
+      },
+      {
+        "key": "C",
+        "text": "Java bytecode"
+      },
+      {
+        "key": "D",
+        "text": "A program file written in Java programming language"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Java bytecode"
+  },
+  {
+    "id": 3,
+    "week": 1,
+    "question": "Which of the following is NOT an object-oriented programming paradigm?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Encapsulation"
+      },
+      {
+        "key": "B",
+        "text": "Inheritance"
+      },
+      {
+        "key": "C",
+        "text": "Polymorphism"
+      },
+      {
+        "key": "D",
+        "text": "Dynamic memory allocation"
+      }
+    ],
+    "answer": "D",
+    "answerText": "Dynamic memory allocation"
+  },
+  {
+    "id": 4,
+    "week": 1,
+    "question": "What is the correct sequence of steps to execute a Java program?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Run → Edit → Compile"
+      },
+      {
+        "key": "B",
+        "text": "Edit → Run → Compile"
+      },
+      {
+        "key": "C",
+        "text": "Compile → Edit → Run"
+      },
+      {
+        "key": "D",
+        "text": "Edit → Compile → Run"
+      }
+    ],
+    "answer": "D",
+    "answerText": "Edit → Compile → Run"
+  },
+  {
+    "id": 5,
+    "week": 1,
+    "question": "Which program is used to compile Java source code into bytecode?",
+    "options": [
+      {
+        "key": "A",
+        "text": "javap"
+      },
+      {
+        "key": "B",
+        "text": "javac"
+      },
+      {
+        "key": "C",
+        "text": "java"
+      },
+      {
+        "key": "D",
+        "text": "javad"
+      }
+    ],
+    "answer": "B",
+    "answerText": "javac"
+  },
+  {
+    "id": 6,
+    "week": 1,
+    "question": "In Java, what is the role of the public static void main(String[] args) method?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Initialization method"
+      },
+      {
+        "key": "B",
+        "text": "Execution entry point"
+      },
+      {
+        "key": "C",
+        "text": "Constructor"
+      },
+      {
+        "key": "D",
+        "text": "Destructor"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Execution entry point"
+  },
+  {
+    "id": 7,
+    "week": 1,
+    "question": "Which of the following is not a feature of Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Platform Independence"
+      },
+      {
+        "key": "B",
+        "text": "Object-Oriented Programming"
+      },
+      {
+        "key": "C",
+        "text": "Supports Explicit Pointers"
+      },
+      {
+        "key": "D",
+        "text": "Supports Polymorphism"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Supports Explicit Pointers"
+  },
+  {
+    "id": 8,
+    "week": 1,
+    "question": "What is the primary purpose of the Java Virtual Machine (JVM) in the Java programming language?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Graphical User Interface"
+      },
+      {
+        "key": "B",
+        "text": "Platform Independence"
+      },
+      {
+        "key": "C",
+        "text": "Code Debugging"
+      },
+      {
+        "key": "D",
+        "text": "Game Engine"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Platform Independence"
+  },
+  {
+    "id": 9,
+    "week": 1,
+    "question": "Consider the following program. public class Question { public static void main(String[] args) { int x = 5; x *= (2 + 8); System.out.println(x); } } What is the output of the above code?",
+    "options": [
+      {
+        "key": "A",
+        "text": "50"
+      },
+      {
+        "key": "B",
+        "text": "10"
+      },
+      {
+        "key": "C",
+        "text": "Compiler error"
+      },
+      {
+        "key": "D",
+        "text": "5"
+      }
+    ],
+    "answer": "A",
+    "answerText": "50"
+  },
+  {
+    "id": 10,
+    "week": 1,
+    "question": "Which of the following is true regarding how Java handles code execution?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Java uses only an interpreter."
+      },
+      {
+        "key": "B",
+        "text": "Java uses only a compiler."
+      },
+      {
+        "key": "C",
+        "text": "Java uses both an interpreter and a compiler."
+      },
+      {
+        "key": "D",
+        "text": "None of the above."
+      }
+    ],
+    "answer": "C",
+    "answerText": "Java uses both an interpreter and a compiler."
+  },
+  {
+    "id": 11,
+    "week": 2,
+    "question": "What is the correct signature of the main method in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "public static void main(String[] args)"
+      },
+      {
+        "key": "B",
+        "text": "public void main(String args[])"
+      },
+      {
+        "key": "C",
+        "text": "void main(String[] args)"
+      },
+      {
+        "key": "D",
+        "text": "public static void main(String [])"
+      }
+    ],
+    "answer": "A",
+    "answerText": "public static void main(String[] args)"
+  },
+  {
+    "id": 12,
+    "week": 2,
+    "question": "Consider the following code. public class VarPrint { int x = 30; static int y = 20; public static void main(String[] args) { VarPrint t1 = new VarPrint(); t1.x = 88; t1.y = 99; int z1 = t1.x + t1.y; VarPrint t2 = new VarPrint(); System.out.println(t2.x + \" \" + t2.y + \" \" + z1); } } What will be the output of the above Java program?",
+    "options": [
+      {
+        "key": "A",
+        "text": "30 99 178"
+      },
+      {
+        "key": "B",
+        "text": "30 88 129"
+      },
+      {
+        "key": "C",
+        "text": "30 99 187"
+      },
+      {
+        "key": "D",
+        "text": "99 99 187"
+      }
+    ],
+    "answer": "C",
+    "answerText": "30 99 187"
+  },
+  {
+    "id": 13,
+    "week": 2,
+    "question": "Consider the following code. The program demonstrates how Java evaluates expressions involving integers, strings, and the + operator. public class Argument { public static void main(String[] args) { Test t = new Test(); t.start(); } static class Test { void start() { int a = 4; int b = 5; System.out.print(\"\" + b + 3 + \"\"); System.out.print(a + b); System.out.print(\" \" + a + b + \"\"); System.out.print(foo() + a + b + \"\"); System.out.println(a + b + foo()); } String foo() { return \"foo\"; } } } What will be the output of the code given above?",
+    "options": [
+      {
+        "key": "A",
+        "text": "539 45foo45 9foo"
+      },
+      {
+        "key": "B",
+        "text": "9 7 7 foo34 34foo"
+      },
+      {
+        "key": "C",
+        "text": "72 34 34 foo34 34foo"
+      },
+      {
+        "key": "D",
+        "text": "839 45foo45 9foo"
+      }
+    ],
+    "answer": "A",
+    "answerText": "539 45foo45 9foo"
+  },
+  {
+    "id": 14,
+    "week": 2,
+    "question": "Which keyword is used in Java to refer to the current object?",
+    "options": [
+      {
+        "key": "A",
+        "text": "this"
+      },
+      {
+        "key": "B",
+        "text": "that"
+      },
+      {
+        "key": "C",
+        "text": "self"
+      },
+      {
+        "key": "D",
+        "text": "current"
+      }
+    ],
+    "answer": "A",
+    "answerText": "this"
+  },
+  {
+    "id": 15,
+    "week": 2,
+    "question": "Which of the following is true about constructors in a class?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Constructors do not have a return type."
+      },
+      {
+        "key": "B",
+        "text": "Constructors aren't used to initialize objects."
+      },
+      {
+        "key": "C",
+        "text": "A class can have only one constructor."
+      },
+      {
+        "key": "D",
+        "text": "Constructors cannot be overloaded."
+      }
+    ],
+    "answer": "A",
+    "answerText": "Constructors do not have a return type."
+  },
+  {
+    "id": 16,
+    "week": 2,
+    "question": "Consider the following code snippet. The program creates an object, assigns a value to its instance variable through a constructor, and prints that value. class XYZ { int x; XYZ(int x) { this.x = x; } void printX() { System.out.println(this.x); } public static void main(String[] args) { XYZ obj = new XYZ(0); obj.printX(); } } What will be the output of the code given above?",
+    "options": [
+      {
+        "key": "A",
+        "text": "0"
+      },
+      {
+        "key": "B",
+        "text": "10"
+      },
+      {
+        "key": "C",
+        "text": "100"
+      },
+      {
+        "key": "D",
+        "text": "Runtime error"
+      }
+    ],
+    "answer": "A",
+    "answerText": "0"
+  },
+  {
+    "id": 17,
+    "week": 2,
+    "question": "Consider the code snippet given below. public class Main { public static void main(String[] args) { System.out.println(\"Hello\"); System.out.println(\"World\"); System.out.printf(\"Number: %d\", 10); } } What will be the output of the code given above?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hello World\\nNumber: 10"
+      },
+      {
+        "key": "B",
+        "text": "Hello WorldNumber: 10"
+      },
+      {
+        "key": "C",
+        "text": "Hello\\nWorld\\nNumber: 10"
+      },
+      {
+        "key": "D",
+        "text": "Hello World\\nNumber: 10\\n"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Hello\\nWorld\\nNumber: 10"
+  },
+  {
+    "id": 18,
+    "week": 2,
+    "question": "Which class is used in Java to take runtime data input from the user?",
+    "options": [
+      {
+        "key": "A",
+        "text": "BufferReader"
+      },
+      {
+        "key": "B",
+        "text": "UserInputStreamReader"
+      },
+      {
+        "key": "C",
+        "text": "Scanner"
+      },
+      {
+        "key": "D",
+        "text": "DataInputStreamReader"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Scanner"
+  },
+  {
+    "id": 19,
+    "week": 2,
+    "question": "How do you read a line of text from the console using the Scanner class in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "scanner.readLine()"
+      },
+      {
+        "key": "B",
+        "text": "scanner.nextLine()"
+      },
+      {
+        "key": "C",
+        "text": "scanner.getLine()"
+      },
+      {
+        "key": "D",
+        "text": "scanner.fetchLine()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "scanner.nextLine()"
+  },
+  {
+    "id": 20,
+    "week": 2,
+    "question": "Which of the following is the correct way to declare a class in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "public class MyClass {}"
+      },
+      {
+        "key": "B",
+        "text": "class MyClass[] {}"
+      },
+      {
+        "key": "C",
+        "text": "public MyClass class {}"
+      },
+      {
+        "key": "D",
+        "text": "MyClass public class {}"
+      }
+    ],
+    "answer": "A",
+    "answerText": "public class MyClass {}"
+  },
+  {
+    "id": 21,
+    "week": 3,
+    "question": "Which of the following statements is true regarding the order of execution of constructors in an inheritance hierarchy?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Derived class constructor will be called followed by the base class constructor."
+      },
+      {
+        "key": "B",
+        "text": "Only base class constructor will be called."
+      },
+      {
+        "key": "C",
+        "text": "Only derived class constructor will be called."
+      },
+      {
+        "key": "D",
+        "text": "Base class constructor will be called followed by the derived class constructor."
+      }
+    ],
+    "answer": "D",
+    "answerText": "Base class constructor will be called followed by the derived class constructor."
+  },
+  {
+    "id": 22,
+    "week": 3,
+    "question": "The super() method is used to:",
+    "options": [
+      {
+        "key": "A",
+        "text": "Call constructor of friend class."
+      },
+      {
+        "key": "B",
+        "text": "Call constructor of the parent class."
+      },
+      {
+        "key": "C",
+        "text": "Call constructor."
+      },
+      {
+        "key": "D",
+        "text": "Is a declared method."
+      }
+    ],
+    "answer": "B",
+    "answerText": "Call constructor of the parent class."
+  },
+  {
+    "id": 23,
+    "week": 3,
+    "question": "What is the output of the following Java program? Program: class Vehicle { public void move() { System.out.println(\"The vehicle moves\"); } } class Car extends Vehicle { public void move() { System.out.println(\"The car moves\"); } } public class Main { public static void main(String[] args) { Vehicle vehicle = new Car(); vehicle.move(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "\"The vehicle moves\""
+      },
+      {
+        "key": "B",
+        "text": "\"The car moves\""
+      },
+      {
+        "key": "C",
+        "text": "The code does not compile."
+      },
+      {
+        "key": "D",
+        "text": "None of the above."
+      }
+    ],
+    "answer": "B",
+    "answerText": "\"The car moves\""
+  },
+  {
+    "id": 24,
+    "week": 3,
+    "question": "Which of the following is NOT true regarding the final keyword in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A final method cannot be overridden in a subclass."
+      },
+      {
+        "key": "B",
+        "text": "A final variable can only be assigned once."
+      },
+      {
+        "key": "C",
+        "text": "A final class can have subclasses."
+      },
+      {
+        "key": "D",
+        "text": "A final variable can be assigned during declaration or in the constructor."
+      }
+    ],
+    "answer": "C",
+    "answerText": "A final class can have subclasses."
+  },
+  {
+    "id": 25,
+    "week": 3,
+    "question": "Which type of inheritance leads to the \"Diamond Problem\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Single-level"
+      },
+      {
+        "key": "B",
+        "text": "Multi-level"
+      },
+      {
+        "key": "C",
+        "text": "Multiple"
+      },
+      {
+        "key": "D",
+        "text": "Hierarchical"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Multiple"
+  },
+  {
+    "id": 26,
+    "week": 3,
+    "question": "Members of a class which are not intended to be inherited by subclasses should be declared as:",
+    "options": [
+      {
+        "key": "A",
+        "text": "Public members"
+      },
+      {
+        "key": "B",
+        "text": "Protected members"
+      },
+      {
+        "key": "C",
+        "text": "Private members"
+      },
+      {
+        "key": "D",
+        "text": "Private or Protected members"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Private members"
+  },
+  {
+    "id": 27,
+    "week": 3,
+    "question": "In Java, is it possible to override a static method?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yes, we can override a static method just like we do with instance methods."
+      },
+      {
+        "key": "B",
+        "text": "No, static methods cannot be overridden because they belong to the class, not the object."
+      },
+      {
+        "key": "C",
+        "text": "It depends on whether the static method is declared as final or not."
+      },
+      {
+        "key": "D",
+        "text": "It depends on the access modifier of the static method."
+      }
+    ],
+    "answer": "B",
+    "answerText": "No, static methods cannot be overridden because they belong to the class, not the object."
+  },
+  {
+    "id": 28,
+    "week": 3,
+    "question": "What is the output of the following Java program? Program: public class NptelExample { public static int fun(int n) { if (n == 0) { return 1; } return n * fun(n - 1); } public static void main(String[] args) { System.out.println(fun(5)); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "5"
+      },
+      {
+        "key": "B",
+        "text": "24"
+      },
+      {
+        "key": "C",
+        "text": "120"
+      },
+      {
+        "key": "D",
+        "text": "Runtime Error"
+      }
+    ],
+    "answer": "C",
+    "answerText": "120"
+  },
+  {
+    "id": 29,
+    "week": 3,
+    "question": "Which of the following statements about abstract classes in Java is correct?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Abstract classes can be instantiated directly."
+      },
+      {
+        "key": "B",
+        "text": "An abstract class must contain at least one abstract method."
+      },
+      {
+        "key": "C",
+        "text": "A class inheriting from an abstract class must implement all its abstract methods unless it is itself abstract."
+      },
+      {
+        "key": "D",
+        "text": "Abstract classes can be marked as final."
+      }
+    ],
+    "answer": "C",
+    "answerText": "A class inheriting from an abstract class must implement all its abstract methods unless it is itself abstract."
+  },
+  {
+    "id": 30,
+    "week": 3,
+    "question": "What will be the output of the following program? Program: class superDemoClass { final int a = 20; } class subDemoClass extends superDemoClass { void subFunc() { a = 40; System.out.println(\"value of a = \" + a); } } class demo { public static void main(String[] args) { subDemoClass subc = new subDemoClass(); subc.subFunc(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "Value of a = 20"
+      },
+      {
+        "key": "B",
+        "text": "Error: cannot assign a value to final variable a."
+      },
+      {
+        "key": "C",
+        "text": "Error: unknown variable a in class subDemoClass."
+      },
+      {
+        "key": "D",
+        "text": "Value of a = 40"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Error: cannot assign a value to final variable a."
+  },
+  {
+    "id": 31,
+    "week": 4,
+    "question": "What is the process by which we can control what parts of a program can access the members of a class?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Polymorphism"
+      },
+      {
+        "key": "B",
+        "text": "Aggregation"
+      },
+      {
+        "key": "C",
+        "text": "Encapsulation"
+      },
+      {
+        "key": "D",
+        "text": "Recursion"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Encapsulation"
+  },
+  {
+    "id": 32,
+    "week": 4,
+    "question": "Consider the program given below. public class Main { public static void main(String args[]) { System.out.println(cos(2 * PI)); } } What will be the output if the program is executed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It will give compile-time error"
+      },
+      {
+        "key": "B",
+        "text": "It will give run-time error"
+      },
+      {
+        "key": "C",
+        "text": "1.0"
+      },
+      {
+        "key": "D",
+        "text": "3.14"
+      }
+    ],
+    "answer": "A",
+    "answerText": "It will give compile-time error"
+  },
+  {
+    "id": 33,
+    "week": 4,
+    "question": "Consider the following code. class Person { int a = 1; int b = 1; public Person() { System.out.print(a + b + \"Java\" + a); } } class Employee extends Person { int a = 0; int b = 1; public Employee() { System.out.print(a + b + \"Java\" + a); } } public class Question { public static void main(String args[]) { Person p = new Employee(); } } What will be the output of the code given above?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2Java11Java0"
+      },
+      {
+        "key": "B",
+        "text": "1Java10Java0"
+      },
+      {
+        "key": "C",
+        "text": "1Java01Java1"
+      },
+      {
+        "key": "D",
+        "text": "0Java11Java0"
+      }
+    ],
+    "answer": "A",
+    "answerText": "2Java11Java0"
+  },
+  {
+    "id": 34,
+    "week": 4,
+    "question": "In Java, can a subclass in a different package access a superclass's protected method?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yes, without any restrictions."
+      },
+      {
+        "key": "B",
+        "text": "Yes, but only if they are in the same package."
+      },
+      {
+        "key": "C",
+        "text": "No, protected methods are not accessible by subclasses."
+      },
+      {
+        "key": "D",
+        "text": "Yes, but only through inheritance (i.e., using super or this, not via an object)."
+      }
+    ],
+    "answer": "D",
+    "answerText": "Yes, but only through inheritance (i.e., using super or this, not via an object)."
+  },
+  {
+    "id": 35,
+    "week": 4,
+    "question": "A package is a collection of:",
+    "options": [
+      {
+        "key": "A",
+        "text": "Only classes"
+      },
+      {
+        "key": "B",
+        "text": "Only interfaces"
+      },
+      {
+        "key": "C",
+        "text": "Editing tools"
+      },
+      {
+        "key": "D",
+        "text": "Classes, methods and interfaces"
+      }
+    ],
+    "answer": "D",
+    "answerText": "Classes, methods and interfaces"
+  },
+  {
+    "id": 36,
+    "week": 4,
+    "question": "Consider the following two programs. The question compares the pre-increment and post-increment operators. Program 1 public class Main1 { public static void main(String args[]) { int number = 10; System.out.println(number++ + ++number); } } Program 2 public class Main2 { public static void main(String args[]) { int number = 10; System.out.println(++number + number++); } } Choose the best option among the following for the code snippets given above.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Both pre-increment and post-increment operators become pre-increment during printing."
+      },
+      {
+        "key": "B",
+        "text": "Both pre-increment and post-increment operators become post-increment during printing."
+      },
+      {
+        "key": "C",
+        "text": "Both Main1 and Main2 classes give the same output."
+      },
+      {
+        "key": "D",
+        "text": "Pre-increment and post-increment operators don't work during printing."
+      }
+    ],
+    "answer": "C",
+    "answerText": "Both Main1 and Main2 classes give the same output."
+  },
+  {
+    "id": 37,
+    "week": 4,
+    "question": "Consider the following program. class Base { public void print() { System.out.println(\"Base class...\"); } } class Derived extends Base { public void print() { System.out.println(\"Derived class...\"); } } public class Main { private static void main(String[] args) { Base b = new Base(); b.print(); Derived d = new Derived(); d.print(); } } How many errors does this program contain?",
+    "options": [
+      {
+        "key": "A",
+        "text": "None"
+      },
+      {
+        "key": "B",
+        "text": "1"
+      },
+      {
+        "key": "C",
+        "text": "2"
+      },
+      {
+        "key": "D",
+        "text": "3"
+      }
+    ],
+    "answer": "B",
+    "answerText": "1"
+  },
+  {
+    "id": 38,
+    "week": 4,
+    "question": "Consider the code given below. First Java file: Teacher.java package nptel1; public class Teacher { protected void showMarks() { System.out.println(\"100 marks\"); } } Second Java file: Student.java package nptel2; import nptel1.*; public class Student extends Teacher { void show() { showMarks(); } public static void main(String[] args) { Student st = new Student(); st.show(); } } What is the output of the above Java code snippet with protected access modifier?",
+    "options": [
+      {
+        "key": "A",
+        "text": "100 marks"
+      },
+      {
+        "key": "B",
+        "text": "No output"
+      },
+      {
+        "key": "C",
+        "text": "Compiler error"
+      },
+      {
+        "key": "D",
+        "text": "None of the above"
+      }
+    ],
+    "answer": "A",
+    "answerText": "100 marks"
+  },
+  {
+    "id": 39,
+    "week": 4,
+    "question": "Choose the correct syntax of a Java package below.",
+    "options": [
+      {
+        "key": "A",
+        "text": "package PACKAGE_NAME;"
+      },
+      {
+        "key": "B",
+        "text": "package PACKAGE_NAME.*;"
+      },
+      {
+        "key": "C",
+        "text": "pkg PACKAGE_NAME;"
+      },
+      {
+        "key": "D",
+        "text": "pkg PACKAGE_NAME.*;"
+      }
+    ],
+    "answer": "A",
+    "answerText": "package PACKAGE_NAME;"
+  },
+  {
+    "id": 40,
+    "week": 4,
+    "question": "Which of these access specifiers must be used for the main() method?",
+    "options": [
+      {
+        "key": "A",
+        "text": "private"
+      },
+      {
+        "key": "B",
+        "text": "public"
+      },
+      {
+        "key": "C",
+        "text": "protected"
+      },
+      {
+        "key": "D",
+        "text": "Default"
+      }
+    ],
+    "answer": "B",
+    "answerText": "public"
+  },
+  {
+    "id": 41,
+    "week": 5,
+    "question": "Which keyword is NOT used by Java during exception handling?",
+    "options": [
+      {
+        "key": "A",
+        "text": "try"
+      },
+      {
+        "key": "B",
+        "text": "catch"
+      },
+      {
+        "key": "C",
+        "text": "final"
+      },
+      {
+        "key": "D",
+        "text": "finally"
+      }
+    ],
+    "answer": "C",
+    "answerText": "final"
+  },
+  {
+    "id": 42,
+    "week": 5,
+    "question": "What is the purpose of the throws keyword in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To declare exceptions that a method can throw"
+      },
+      {
+        "key": "B",
+        "text": "To throw an exception immediately"
+      },
+      {
+        "key": "C",
+        "text": "To catch an exception"
+      },
+      {
+        "key": "D",
+        "text": "It is not a keyword in Java"
+      }
+    ],
+    "answer": "A",
+    "answerText": "To declare exceptions that a method can throw"
+  },
+  {
+    "id": 43,
+    "week": 5,
+    "question": "Which of the following is TRUE about interfaces in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Interfaces should always be defined as final."
+      },
+      {
+        "key": "B",
+        "text": "Interfaces can be instantiated directly."
+      },
+      {
+        "key": "C",
+        "text": "Interfaces can extend multiple interfaces."
+      },
+      {
+        "key": "D",
+        "text": "Interfaces cannot have any method signatures."
+      }
+    ],
+    "answer": "C",
+    "answerText": "Interfaces can extend multiple interfaces."
+  },
+  {
+    "id": 44,
+    "week": 5,
+    "question": "What will be the output of the following code? interface Demo { void display(); } class Test implements Demo { public void display() { System.out.println(\"Hello, NPTEL!\"); } } public class Main { public static void main(String[] args) { Test obj = new Test(); obj.display(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hello, NPTEL!"
+      },
+      {
+        "key": "B",
+        "text": "Compilation Error"
+      },
+      {
+        "key": "C",
+        "text": "Runtime Error"
+      },
+      {
+        "key": "D",
+        "text": "No Output"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Hello, NPTEL!"
+  },
+  {
+    "id": 45,
+    "week": 5,
+    "question": "What will be the output of the following Java program? interface Calculation { void calculate(int value); } class Square implements Calculation { int result; public void calculate(int value) { result = value * value; System.out.println(\"Square: \" + result); } } class Cube extends Square { public void calculate(int value) { result = value * value * value; super.calculate(value); System.out.println(\"Cube: \" + result); } } public class Main { public static void main(String[] args) { Calculation obj = new Cube(); obj.calculate(3); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "Square: 9 followed by Cube: 9"
+      },
+      {
+        "key": "B",
+        "text": "Cube: 27 followed by Square: 9"
+      },
+      {
+        "key": "C",
+        "text": "Square: 9, Square: 27, Cube: 27"
+      },
+      {
+        "key": "D",
+        "text": "Square: 9, Cube: 27, Square: 27"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Square: 9 followed by Cube: 9"
+  },
+  {
+    "id": 46,
+    "week": 5,
+    "question": "What will be the output of the following Java program? class Main { public static void main(String[] args) { try { int a = 5; int b = 0; System.out.println(a / b); } catch (ArithmeticException e) { System.out.print(\"Error \"); } finally { System.out.print(\"Completed\"); } } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "5 Completed"
+      },
+      {
+        "key": "B",
+        "text": "Error Completed"
+      },
+      {
+        "key": "C",
+        "text": "Runtime Error"
+      },
+      {
+        "key": "D",
+        "text": "Compilation Error"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Error Completed"
+  },
+  {
+    "id": 47,
+    "week": 5,
+    "question": "What will be the output of the following Java program? interface A { int x = 10; void display(); } class B implements A { public void display() { System.out.println(\"Value of x: \" + x); } } public class Main { public static void main(String[] args) { B obj = new B(); obj.display(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "Value of x: 10"
+      },
+      {
+        "key": "B",
+        "text": "Value of x: 0"
+      },
+      {
+        "key": "C",
+        "text": "Compilation Error"
+      },
+      {
+        "key": "D",
+        "text": "Runtime Error"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Value of x: 10"
+  },
+  {
+    "id": 48,
+    "week": 5,
+    "question": "Which keyword is used by Java during exception handling?",
+    "options": [
+      {
+        "key": "A",
+        "text": "final"
+      },
+      {
+        "key": "B",
+        "text": "finally"
+      },
+      {
+        "key": "C",
+        "text": "caught"
+      },
+      {
+        "key": "D",
+        "text": "finished"
+      }
+    ],
+    "answer": "B",
+    "answerText": "finally"
+  },
+  {
+    "id": 49,
+    "week": 5,
+    "question": "A method that potentially generates a checked exception must include which keyword in its method signature?",
+    "options": [
+      {
+        "key": "A",
+        "text": "throw"
+      },
+      {
+        "key": "B",
+        "text": "extend"
+      },
+      {
+        "key": "C",
+        "text": "throws"
+      },
+      {
+        "key": "D",
+        "text": "extends"
+      }
+    ],
+    "answer": "C",
+    "answerText": "throws"
+  },
+  {
+    "id": 50,
+    "week": 5,
+    "question": "Consider the following Java program. class Test extends Exception { } class Main { public static void main(String[] args) { try { throw new Test(); } catch (Test e) { System.out.println(\"Got the Test Exception\"); } finally { System.out.println(\"Inside finally block\"); } } } What will be the output of the above code?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Got the Test Exception, followed by Inside finally block"
+      },
+      {
+        "key": "B",
+        "text": "Got the Test Exception only"
+      },
+      {
+        "key": "C",
+        "text": "Inside finally block only"
+      },
+      {
+        "key": "D",
+        "text": "Compiler Error"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Got the Test Exception, followed by Inside finally block"
+  },
+  {
+    "id": 51,
+    "week": 6,
+    "question": "What is the primary difference between Byte Streams and Character Streams in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Byte Streams handle characters, while Character Streams handle bytes."
+      },
+      {
+        "key": "B",
+        "text": "Byte Streams are used for binary data, while Character Streams are used for decimal data."
+      },
+      {
+        "key": "C",
+        "text": "Character Streams are faster than Byte Streams in all cases."
+      },
+      {
+        "key": "D",
+        "text": "Byte Streams are used for binary data, while Character Streams are used for text data."
+      }
+    ],
+    "answer": "D",
+    "answerText": "Byte Streams are used for binary data, while Character Streams are used for text data."
+  },
+  {
+    "id": 52,
+    "week": 6,
+    "question": "Which of the following best describes the concept of multithreading in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Multiple threads execute concurrently, sharing the same memory space."
+      },
+      {
+        "key": "B",
+        "text": "Only one thread executes at a time, ensuring sequential execution."
+      },
+      {
+        "key": "C",
+        "text": "Threads in Java cannot communicate with each other."
+      },
+      {
+        "key": "D",
+        "text": "Threads require separate memory allocation for each thread to run."
+      }
+    ],
+    "answer": "A",
+    "answerText": "Multiple threads execute concurrently, sharing the same memory space."
+  },
+  {
+    "id": 53,
+    "week": 6,
+    "question": "Consider the code given below. class ExampleThread extends Thread { public void run() { System.out.println(\"Thread is running.\"); } } public class Main { public static void main(String[] args) { ExampleThread thread = new ExampleThread(); thread.start(); //thread.start(); } } What will happen when the above code is executed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The program will execute successfully, printing \"Thread is running.\" twice."
+      },
+      {
+        "key": "B",
+        "text": "The program will throw an error when attempting to start the thread a second time."
+      },
+      {
+        "key": "C",
+        "text": "The program will terminate without any output."
+      },
+      {
+        "key": "D",
+        "text": "The program will execute successfully, printing \"Thread is running.\""
+      }
+    ],
+    "answer": "D",
+    "answerText": "The program will execute successfully, printing \"Thread is running.\""
+  },
+  {
+    "id": 54,
+    "week": 6,
+    "question": "Which method is used to start a thread in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "run()"
+      },
+      {
+        "key": "B",
+        "text": "start()"
+      },
+      {
+        "key": "C",
+        "text": "execute()"
+      },
+      {
+        "key": "D",
+        "text": "begin()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "start()"
+  },
+  {
+    "id": 55,
+    "week": 6,
+    "question": "Consider the code given below. class RunnableExample implements Runnable { public void run() { for (int i = 1; i <= 3; i++) { System.out.println(\"Thread running: \" + i); } } } public class Main { public static void main(String[] args) { RunnableExample task = new RunnableExample(); Thread thread = new Thread(task); thread.start(); } } What will happen when the above code is executed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The program will throw a compile-time error because Runnable is not a thread."
+      },
+      {
+        "key": "B",
+        "text": "The program will execute successfully, and the run() method will run in a new thread."
+      },
+      {
+        "key": "C",
+        "text": "The program will execute the run() method directly on the main thread."
+      },
+      {
+        "key": "D",
+        "text": "The program will throw a runtime error because Runnable is not properly implemented."
+      }
+    ],
+    "answer": "B",
+    "answerText": "The program will execute successfully, and the run() method will run in a new thread."
+  },
+  {
+    "id": 56,
+    "week": 6,
+    "question": "Which of the following states can a thread enter during its lifecycle in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "New, Runnable, Running, Blocked"
+      },
+      {
+        "key": "B",
+        "text": "New, Runnable, Waiting, Blocked"
+      },
+      {
+        "key": "C",
+        "text": "New, Runnable, Running, Sleeping, Dead"
+      },
+      {
+        "key": "D",
+        "text": "New, Runnable, Waiting, Blocked, Terminated"
+      }
+    ],
+    "answer": "D",
+    "answerText": "New, Runnable, Waiting, Blocked, Terminated"
+  },
+  {
+    "id": 57,
+    "week": 6,
+    "question": "What does the thread scheduler use to decide which thread to run when multiple threads are in the runnable state?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Thread priority"
+      },
+      {
+        "key": "B",
+        "text": "Thread execution time"
+      },
+      {
+        "key": "C",
+        "text": "Thread name"
+      },
+      {
+        "key": "D",
+        "text": "Thread creation order"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Thread priority"
+  },
+  {
+    "id": 58,
+    "week": 6,
+    "question": "Consider the code given below. class PriorityExample extends Thread { public void run() { System.out.println( Thread.currentThread().getName() + \" with priority \" + Thread.currentThread().getPriority() ); } } public class Main { public static void main(String[] args) { PriorityExample t1 = new PriorityExample(); PriorityExample t2 = new PriorityExample(); t1.setPriority(Thread.MIN_PRIORITY); t2.setPriority(Thread.MAX_PRIORITY); t1.start(); t2.start(); } } Which of the following is true about the output?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The thread with the higher priority is guaranteed to execute first."
+      },
+      {
+        "key": "B",
+        "text": "The thread with the lower priority will never execute."
+      },
+      {
+        "key": "C",
+        "text": "The order of execution depends on the JVM and OS scheduling policies."
+      },
+      {
+        "key": "D",
+        "text": "The program will throw an error due to invalid priority values."
+      }
+    ],
+    "answer": "C",
+    "answerText": "The order of execution depends on the JVM and OS scheduling policies."
+  },
+  {
+    "id": 59,
+    "week": 6,
+    "question": "Consider the code given below. class PriorityExample extends Thread { public void run() { System.out.println( Thread.currentThread().getName() + \" with priority \" + Thread.currentThread().getPriority() ); } } public class Main { public static void main(String[] args) { PriorityExample t1 = new PriorityExample(); PriorityExample t2 = new PriorityExample(); t1.setPriority(Thread.MIN_PRIORITY); t2.setPriority(Thread.MAX_PRIORITY); t1.start(); t2.start(); } } Which of the following is true about the output?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The thread with the higher priority is guaranteed to execute first."
+      },
+      {
+        "key": "B",
+        "text": "The thread with the lower priority will never execute."
+      },
+      {
+        "key": "C",
+        "text": "The order of execution depends on the JVM and OS scheduling policies."
+      },
+      {
+        "key": "D",
+        "text": "The program will throw an error due to invalid priority values."
+      }
+    ],
+    "answer": "D",
+    "answerText": "The program will throw an error due to invalid priority values."
+  },
+  {
+    "id": 60,
+    "week": 6,
+    "question": "Which of the following methods returns a reference to the currently executing thread object?",
+    "options": [
+      {
+        "key": "A",
+        "text": "public static boolean isInterrupted()"
+      },
+      {
+        "key": "B",
+        "text": "public static Thread currentThread()"
+      },
+      {
+        "key": "C",
+        "text": "public final boolean isAlive()"
+      },
+      {
+        "key": "D",
+        "text": "public final void suspend()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "public static Thread currentThread()"
+  },
+  {
+    "id": 61,
+    "week": 7,
+    "question": "What will be the output of the following Java program? import java.io.*; class Main { public static void main(String[] args) throws IOException { FileReader fr = new FileReader(\"NPTEL.txt\"); BufferedReader br = new BufferedReader(fr); System.out.println(br.readLine()); br.close(); } } Assume NPTEL.txt contains: This is Programming in Java online course.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hello, World!"
+      },
+      {
+        "key": "B",
+        "text": "This is Programming in Java online course."
+      },
+      {
+        "key": "C",
+        "text": "IOException"
+      },
+      {
+        "key": "D",
+        "text": "null"
+      }
+    ],
+    "answer": "B",
+    "answerText": "This is Programming in Java online course."
+  },
+  {
+    "id": 62,
+    "week": 7,
+    "question": "Complete the following snippet with the required code.Program import java.io.*; class Main { public static void main(String[] args) { File f = new File(\"NPTEL.txt\"); if (________________) { System.out.println(\"File exists\"); } else { System.out.println(\"File does not exist\"); } } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "f.exists()"
+      },
+      {
+        "key": "B",
+        "text": "f.isFile()"
+      },
+      {
+        "key": "C",
+        "text": "File.FileExists()"
+      },
+      {
+        "key": "D",
+        "text": "File.isAvailable()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "f.exists()"
+  },
+  {
+    "id": 63,
+    "week": 7,
+    "question": "What is the output of the following Java program? class Main { public static void main(String args[]) { final int i; i = 20; i = 30; System.out.println(i); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "30"
+      },
+      {
+        "key": "B",
+        "text": "Compiler Error"
+      },
+      {
+        "key": "C",
+        "text": "Garbage value"
+      },
+      {
+        "key": "D",
+        "text": "0"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Compiler Error"
+  },
+  {
+    "id": 64,
+    "week": 7,
+    "question": "Which of these values is returned by the read() method when the end of file (EOF) is encountered?",
+    "options": [
+      {
+        "key": "A",
+        "text": "0"
+      },
+      {
+        "key": "B",
+        "text": "1"
+      },
+      {
+        "key": "C",
+        "text": "-1"
+      },
+      {
+        "key": "D",
+        "text": "Null"
+      }
+    ],
+    "answer": "C",
+    "answerText": "-1"
+  },
+  {
+    "id": 65,
+    "week": 7,
+    "question": "What will be the output of the following Java program? public class Calculator { int num = 100; public void calc(int num) { this.num = num * 10; } public void printNum() { System.out.println(num); } public static void main(String[] args) { Calculator obj = new Calculator(); obj.calc(2); obj.printNum(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "20"
+      },
+      {
+        "key": "B",
+        "text": "100"
+      },
+      {
+        "key": "C",
+        "text": "1000"
+      },
+      {
+        "key": "D",
+        "text": "2"
+      }
+    ],
+    "answer": "A",
+    "answerText": "20"
+  },
+  {
+    "id": 66,
+    "week": 7,
+    "question": "What is the primary difference between Byte Streams and Character Streams in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Byte Streams handle characters, while Character Streams handle bytes."
+      },
+      {
+        "key": "B",
+        "text": "Byte Streams are used for binary data, while Character Streams are used for image data."
+      },
+      {
+        "key": "C",
+        "text": "Character Streams are faster than Byte Streams in all cases."
+      },
+      {
+        "key": "D",
+        "text": "Byte Streams are used for binary data, while Character Streams are used for text data."
+      }
+    ],
+    "answer": "D",
+    "answerText": "Byte Streams are used for binary data, while Character Streams are used for text data."
+  },
+  {
+    "id": 67,
+    "week": 7,
+    "question": "What is the primary purpose of thread synchronization in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To allow multiple threads to execute a method at the same time."
+      },
+      {
+        "key": "B",
+        "text": "To ensure thread execution follows a specific order."
+      },
+      {
+        "key": "C",
+        "text": "To ensure data inconsistency."
+      },
+      {
+        "key": "D",
+        "text": "To prevent race conditions and ensure data consistency."
+      }
+    ],
+    "answer": "D",
+    "answerText": "To prevent race conditions and ensure data consistency."
+  },
+  {
+    "id": 68,
+    "week": 7,
+    "question": "Which stream does a Java application use to only READ data from a source? It may be a file, an array, a peripheral device, or a socket.",
+    "options": [
+      {
+        "key": "A",
+        "text": "InputStream"
+      },
+      {
+        "key": "B",
+        "text": "OutputStream"
+      },
+      {
+        "key": "C",
+        "text": "InputOutputStream"
+      },
+      {
+        "key": "D",
+        "text": "DataOutputStream"
+      }
+    ],
+    "answer": "A",
+    "answerText": "InputStream"
+  },
+  {
+    "id": 69,
+    "week": 7,
+    "question": "Which class in Java is used to create a new directory?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FileReader"
+      },
+      {
+        "key": "B",
+        "text": "FileWriter"
+      },
+      {
+        "key": "C",
+        "text": "File"
+      },
+      {
+        "key": "D",
+        "text": "Directory"
+      }
+    ],
+    "answer": "C",
+    "answerText": "File"
+  },
+  {
+    "id": 70,
+    "week": 7,
+    "question": "What is the primary purpose of input streams in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To write data to a file."
+      },
+      {
+        "key": "B",
+        "text": "To read data from a file."
+      },
+      {
+        "key": "C",
+        "text": "To delete a file."
+      },
+      {
+        "key": "D",
+        "text": "To create directories."
+      }
+    ],
+    "answer": "B",
+    "answerText": "To read data from a file."
+  },
+  {
+    "id": 71,
+    "week": 8,
+    "question": "Which of the following is TRUE about check boxes and radio buttons?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Check boxes allow only one selection, while radio buttons allow multiple selections."
+      },
+      {
+        "key": "B",
+        "text": "Check boxes allow multiple selections, while radio buttons allow only one selection."
+      },
+      {
+        "key": "C",
+        "text": "Both allow only one selection."
+      },
+      {
+        "key": "D",
+        "text": "Both allow multiple selections."
+      }
+    ],
+    "answer": "B",
+    "answerText": "Check boxes allow multiple selections, while radio buttons allow only one selection."
+  },
+  {
+    "id": 72,
+    "week": 8,
+    "question": "Which layout manager arranges components in a rectangular grid?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FlowLayout"
+      },
+      {
+        "key": "B",
+        "text": "CardLayout"
+      },
+      {
+        "key": "C",
+        "text": "BorderLayout"
+      },
+      {
+        "key": "D",
+        "text": "GridLayout"
+      }
+    ],
+    "answer": "D",
+    "answerText": "GridLayout"
+  },
+  {
+    "id": 73,
+    "week": 8,
+    "question": "Which method is used to set the title of a Frame in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "setTitle()"
+      },
+      {
+        "key": "B",
+        "text": "setName()"
+      },
+      {
+        "key": "C",
+        "text": "setText()"
+      },
+      {
+        "key": "D",
+        "text": "setLabel()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "setTitle()"
+  },
+  {
+    "id": 74,
+    "week": 8,
+    "question": "Which method is used to request that a component be repainted in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "paint()"
+      },
+      {
+        "key": "B",
+        "text": "repaint()"
+      },
+      {
+        "key": "C",
+        "text": "update()"
+      },
+      {
+        "key": "D",
+        "text": "draw()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "repaint()"
+  },
+  {
+    "id": 75,
+    "week": 8,
+    "question": "Which AWT component is used to display a scrolling list of items?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Label"
+      },
+      {
+        "key": "B",
+        "text": "List"
+      },
+      {
+        "key": "C",
+        "text": "Button"
+      },
+      {
+        "key": "D",
+        "text": "TextField"
+      }
+    ],
+    "answer": "B",
+    "answerText": "List"
+  },
+  {
+    "id": 76,
+    "week": 8,
+    "question": "Which layout manager arranges components in a flow, placing them one after another?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FlowLayout"
+      },
+      {
+        "key": "B",
+        "text": "BorderLayout"
+      },
+      {
+        "key": "C",
+        "text": "GridLayout"
+      },
+      {
+        "key": "D",
+        "text": "CardLayout"
+      }
+    ],
+    "answer": "A",
+    "answerText": "FlowLayout"
+  },
+  {
+    "id": 77,
+    "week": 8,
+    "question": "What does \"AWT\" stand for in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Abstract Widget Toolkit"
+      },
+      {
+        "key": "B",
+        "text": "Advanced Window Toolkit"
+      },
+      {
+        "key": "C",
+        "text": "Abstract Window Toolkit"
+      },
+      {
+        "key": "D",
+        "text": "Advanced Widget Toolkit"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Abstract Window Toolkit"
+  },
+  {
+    "id": 78,
+    "week": 8,
+    "question": "Which AWT component is used to create a button in a GUI?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Label"
+      },
+      {
+        "key": "B",
+        "text": "Button"
+      },
+      {
+        "key": "C",
+        "text": "TextField"
+      },
+      {
+        "key": "D",
+        "text": "Checkbox"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Button"
+  },
+  {
+    "id": 79,
+    "week": 8,
+    "question": "Which of the following correctly describes the GUI shown below? GUI box from your video The GUI contains two rows: First Name and Last Name, each with a text input field.",
+    "options": [
+      {
+        "key": "A",
+        "text": "It contains two Labels and one TextField."
+      },
+      {
+        "key": "B",
+        "text": "It contains one Frame, two Labels, and two TextFields."
+      },
+      {
+        "key": "C",
+        "text": "It contains two Frames, two Labels, and two TextFields."
+      },
+      {
+        "key": "D",
+        "text": "It contains one Frame, two Buttons, and two TextFields."
+      }
+    ],
+    "answer": "B",
+    "answerText": "It contains one Frame, two Labels, and two TextFields."
+  },
+  {
+    "id": 80,
+    "week": 8,
+    "question": "Which of the following is TRUE about a check box in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A check box cannot be in the on or off state."
+      },
+      {
+        "key": "B",
+        "text": "Clicking a check box changes its state between on and off."
+      },
+      {
+        "key": "C",
+        "text": "A check box can be on and off at the same time."
+      },
+      {
+        "key": "D",
+        "text": "A check box cannot be grouped with other check boxes."
+      }
+    ],
+    "answer": "B",
+    "answerText": "Clicking a check box changes its state between on and off."
+  },
+  {
+    "id": 81,
+    "week": 9,
+    "question": "The container displays a number of components in a row, but adjusts according to the window size. Which of the following layout manager(s) is most naturally suited for the layout given above?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FlowLayout"
+      },
+      {
+        "key": "B",
+        "text": "BorderLayout"
+      },
+      {
+        "key": "C",
+        "text": "GridLayout"
+      },
+      {
+        "key": "D",
+        "text": "BoxLayout"
+      }
+    ],
+    "answer": "A",
+    "answerText": "FlowLayout"
+  },
+  {
+    "id": 82,
+    "week": 9,
+    "question": "In Java, what is the primary purpose of a layout manager?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To manage memory allocation"
+      },
+      {
+        "key": "B",
+        "text": "To arrange GUI components within a container"
+      },
+      {
+        "key": "C",
+        "text": "To handle exception handling"
+      },
+      {
+        "key": "D",
+        "text": "To control database connections"
+      }
+    ],
+    "answer": "B",
+    "answerText": "To arrange GUI components within a container"
+  },
+  {
+    "id": 83,
+    "week": 9,
+    "question": "Consider the following code. What happens when the button in this Java code snippet is clicked? Program : import javax.swing.*; import java.awt.event.*; public class NPTEL { public static void main(String[] args) { JFrame frame = new JFrame(\"NPTEL Java Course\"); JButton button = new JButton(\"Click Me\"); button.setBounds(80, 100, 100, 40); button.addActionListener(new ActionListener() { public void actionPerformed(ActionEvent e) { JOptionPane.showMessageDialog( null, \"Welcome to the course\" ); } }); frame.add(button); frame.setSize(300, 300); frame.setLayout(null); frame.setVisible(true); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "The program exits."
+      },
+      {
+        "key": "B",
+        "text": "A message dialog with the text \"Welcome to the course\" is displayed."
+      },
+      {
+        "key": "C",
+        "text": "The button label changes to \"Welcome to the course\"."
+      },
+      {
+        "key": "D",
+        "text": "Nothing happens."
+      }
+    ],
+    "answer": "B",
+    "answerText": "A message dialog with the text \"Welcome to the course\" is displayed."
+  },
+  {
+    "id": 84,
+    "week": 9,
+    "question": "Consider the following code. What will be the output of the above code? Program: import javax.swing.*; public class NPTEL extends JFrame { JButton button; public NPTEL() { button = new JButton(\"Programming in Java\"); add(button); setSize(300, 200); setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); setVisible(true); } public static void main(String[] args) { new NPTEL(); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "Creates a JFrame with a JButton labeled \"Programming in Java\""
+      },
+      {
+        "key": "B",
+        "text": "Compiles with error"
+      },
+      {
+        "key": "C",
+        "text": "Displays a message dialog"
+      },
+      {
+        "key": "D",
+        "text": "Creates a JPanel with a JButton labeled \"Programming in Java\""
+      }
+    ],
+    "answer": "A",
+    "answerText": "Creates a JFrame with a JButton labeled \"Programming in Java\""
+  },
+  {
+    "id": 85,
+    "week": 9,
+    "question": "Consider the following code. What should replace // INSERT CODE HERE to create a JFrame with a JButton labeled \"Click Me\"? Program: import javax.swing.*; public class FrameExample { public static void main(String[] args) { JFrame frame = new JFrame(\"Demo Frame\"); JButton button = new JButton(\"Click Me\"); // INSERT CODE HERE frame.setSize(300, 200); frame.setVisible(true); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "frame.add(button);"
+      },
+      {
+        "key": "B",
+        "text": "frame.insert(button);"
+      },
+      {
+        "key": "C",
+        "text": "frame.append(button);"
+      },
+      {
+        "key": "D",
+        "text": "frame.push(button);"
+      }
+    ],
+    "answer": "A",
+    "answerText": "frame.add(button);"
+  },
+  {
+    "id": 86,
+    "week": 9,
+    "question": "Identify and correct the error in the following program. What should the erroneous line panel.setFlowLayout(); be replaced with? Program: import javax.swing.*; import java.awt.*; public class panelExample { public static void main(String[] args) { JFrame frame = new JFrame(\"Panel Example\"); JPanel panel = new JPanel(); JButton button = new JButton(\"Submit\"); panel.setFlowLayout(); // ERROR panel.add(button); frame.add(panel); frame.setSize(300, 200); frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); frame.setVisible(true); } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "panel.setLayout(new);"
+      },
+      {
+        "key": "B",
+        "text": "panel.addFlowLayout();"
+      },
+      {
+        "key": "C",
+        "text": "panel.appendLayout(new FlowLayout());"
+      },
+      {
+        "key": "D",
+        "text": "panel.setLayout(new FlowLayout());"
+      }
+    ],
+    "answer": "D",
+    "answerText": "panel.setLayout(new FlowLayout());"
+  },
+  {
+    "id": 87,
+    "week": 9,
+    "question": "Which method is used to remove a component from a container in AWT?",
+    "options": [
+      {
+        "key": "A",
+        "text": "remove()"
+      },
+      {
+        "key": "B",
+        "text": "deleteComponent()"
+      },
+      {
+        "key": "C",
+        "text": "removeComponent()"
+      },
+      {
+        "key": "D",
+        "text": "destroy()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "remove()"
+  },
+  {
+    "id": 88,
+    "week": 9,
+    "question": "Which method is used to handle mouse click events in Java Swing?",
+    "options": [
+      {
+        "key": "A",
+        "text": "mouseClicked()"
+      },
+      {
+        "key": "B",
+        "text": "keyPressed()"
+      },
+      {
+        "key": "C",
+        "text": "actionPerformed()"
+      },
+      {
+        "key": "D",
+        "text": "componentShown()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "mouseClicked()"
+  },
+  {
+    "id": 89,
+    "week": 9,
+    "question": "Which Swing component is best suited for displaying a drop-down list of selectable options?",
+    "options": [
+      {
+        "key": "A",
+        "text": "JButton"
+      },
+      {
+        "key": "B",
+        "text": "JComboBox"
+      },
+      {
+        "key": "C",
+        "text": "JTextField"
+      },
+      {
+        "key": "D",
+        "text": "JPanel"
+      }
+    ],
+    "answer": "B",
+    "answerText": "JComboBox"
+  },
+  {
+    "id": 90,
+    "week": 9,
+    "question": "Which of the following functions is used to specify the layout of a container?",
+    "options": [
+      {
+        "key": "A",
+        "text": "useLayout()"
+      },
+      {
+        "key": "B",
+        "text": "setLayout()"
+      },
+      {
+        "key": "C",
+        "text": "layout()"
+      },
+      {
+        "key": "D",
+        "text": "designLayout()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "setLayout()"
+  },
+  {
+    "id": 91,
+    "week": 10,
+    "question": "Which Swing component is used to display a window?",
+    "options": [
+      {
+        "key": "A",
+        "text": "JFrame"
+      },
+      {
+        "key": "B",
+        "text": "JButton"
+      },
+      {
+        "key": "C",
+        "text": "JLabel"
+      },
+      {
+        "key": "D",
+        "text": "JTextField"
+      }
+    ],
+    "answer": "A",
+    "answerText": "JFrame"
+  },
+  {
+    "id": 92,
+    "week": 10,
+    "question": "Which Swing component is used to enter a single line of text?",
+    "options": [
+      {
+        "key": "A",
+        "text": "JButton"
+      },
+      {
+        "key": "B",
+        "text": "JLabel"
+      },
+      {
+        "key": "C",
+        "text": "JTextField"
+      },
+      {
+        "key": "D",
+        "text": "JPanel"
+      }
+    ],
+    "answer": "C",
+    "answerText": "JTextField"
+  },
+  {
+    "id": 93,
+    "week": 10,
+    "question": "Which Swing component is commonly used to display non-editable text?",
+    "options": [
+      {
+        "key": "A",
+        "text": "JLabel"
+      },
+      {
+        "key": "B",
+        "text": "JButton"
+      },
+      {
+        "key": "C",
+        "text": "JFrame"
+      },
+      {
+        "key": "D",
+        "text": "JTextField"
+      }
+    ],
+    "answer": "A",
+    "answerText": "JLabel"
+  },
+  {
+    "id": 94,
+    "week": 10,
+    "question": "Which JDBC interface is used to execute SQL statements?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ResultSet"
+      },
+      {
+        "key": "B",
+        "text": "Statement"
+      },
+      {
+        "key": "C",
+        "text": "Connection"
+      },
+      {
+        "key": "D",
+        "text": "DriverManager"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Statement"
+  },
+  {
+    "id": 95,
+    "week": 10,
+    "question": "Which JDBC object contains the result of a SELECT query?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Connection"
+      },
+      {
+        "key": "B",
+        "text": "Statement"
+      },
+      {
+        "key": "C",
+        "text": "ResultSet"
+      },
+      {
+        "key": "D",
+        "text": "DriverManager"
+      }
+    ],
+    "answer": "C",
+    "answerText": "ResultSet"
+  },
+  {
+    "id": 96,
+    "week": 10,
+    "question": "Which JDBC class is used to establish a database connection?",
+    "options": [
+      {
+        "key": "A",
+        "text": "DriverManager"
+      },
+      {
+        "key": "B",
+        "text": "ResultSet"
+      },
+      {
+        "key": "C",
+        "text": "Statement"
+      },
+      {
+        "key": "D",
+        "text": "Scanner"
+      }
+    ],
+    "answer": "A",
+    "answerText": "DriverManager"
+  },
+  {
+    "id": 97,
+    "week": 10,
+    "question": "Which Java class is used to connect a client to a server?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ServerSocket"
+      },
+      {
+        "key": "B",
+        "text": "Socket"
+      },
+      {
+        "key": "C",
+        "text": "URL"
+      },
+      {
+        "key": "D",
+        "text": "NetworkInterface"
+      }
+    ],
+    "answer": "B",
+    "answerText": "Socket"
+  },
+  {
+    "id": 98,
+    "week": 10,
+    "question": "Which class is used by a server to listen for client connections?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Socket"
+      },
+      {
+        "key": "B",
+        "text": "URL"
+      },
+      {
+        "key": "C",
+        "text": "ServerSocket"
+      },
+      {
+        "key": "D",
+        "text": "NetworkInterface"
+      }
+    ],
+    "answer": "C",
+    "answerText": "ServerSocket"
+  },
+  {
+    "id": 99,
+    "week": 10,
+    "question": "Which protocol is used in the URL https://nptel.ac.in/?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FTP"
+      },
+      {
+        "key": "B",
+        "text": "HTTP"
+      },
+      {
+        "key": "C",
+        "text": "HTTPS"
+      },
+      {
+        "key": "D",
+        "text": "SMTP"
+      }
+    ],
+    "answer": "C",
+    "answerText": "HTTPS"
+  },
+  {
+    "id": 100,
+    "week": 10,
+    "question": "Which method of NetworkInterface is used to check whether a network interface is up?",
+    "options": [
+      {
+        "key": "A",
+        "text": "isActive()"
+      },
+      {
+        "key": "B",
+        "text": "isUp()"
+      },
+      {
+        "key": "C",
+        "text": "isRunning()"
+      },
+      {
+        "key": "D",
+        "text": "isConnected()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "isUp()"
+  },
+  {
+    "id": 101,
+    "week": 11,
+    "question": "How do you establish a connection to a database using JDBC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By creating an instance of the Connection interface"
+      },
+      {
+        "key": "B",
+        "text": "By using the DriverManager.getConnection() method"
+      },
+      {
+        "key": "C",
+        "text": "By implementing the Connection interface"
+      },
+      {
+        "key": "D",
+        "text": "By extending the Connection class"
+      }
+    ],
+    "answer": "B",
+    "answerText": "By using the DriverManager.getConnection() method"
+  },
+  {
+    "id": 102,
+    "week": 11,
+    "question": "Which method executes a simple query and returns a single ResultSet object?",
+    "options": [
+      {
+        "key": "A",
+        "text": "executeQuery()"
+      },
+      {
+        "key": "B",
+        "text": "executeUpdate()"
+      },
+      {
+        "key": "C",
+        "text": "execute()"
+      },
+      {
+        "key": "D",
+        "text": "run()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "executeQuery()"
+  },
+  {
+    "id": 103,
+    "week": 11,
+    "question": "Which of the following ensures that the correct driver is used to access each data source?",
+    "options": [
+      {
+        "key": "A",
+        "text": "java.sql.Manager"
+      },
+      {
+        "key": "B",
+        "text": "java.sql.DriverManager"
+      },
+      {
+        "key": "C",
+        "text": "java.sql.Statement"
+      },
+      {
+        "key": "D",
+        "text": "java.sql.DriverSession"
+      }
+    ],
+    "answer": "B",
+    "answerText": "java.sql.DriverManager"
+  },
+  {
+    "id": 104,
+    "week": 11,
+    "question": "What is the purpose of the ResultSet interface in JDBC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To store the result of a query"
+      },
+      {
+        "key": "B",
+        "text": "To execute SQL queries"
+      },
+      {
+        "key": "C",
+        "text": "To manage database connections"
+      },
+      {
+        "key": "D",
+        "text": "To update data in the database"
+      }
+    ],
+    "answer": "A",
+    "answerText": "To store the result of a query"
+  },
+  {
+    "id": 105,
+    "week": 11,
+    "question": "What does setAutoCommit(false) do?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Commits transaction after each query"
+      },
+      {
+        "key": "B",
+        "text": "Explicitly commits transaction"
+      },
+      {
+        "key": "C",
+        "text": "Does not commit transaction automatically after each query"
+      },
+      {
+        "key": "D",
+        "text": "Never commits transaction"
+      }
+    ],
+    "answer": "C",
+    "answerText": "Does not commit transaction automatically after each query"
+  },
+  {
+    "id": 106,
+    "week": 11,
+    "question": "Identify the FALSE statement in the following JDBC program Program: Connection con = DriverManager.getConnection( \"jdbc:mysql://localhost:3306/nptel\", \"joy\", \"java\" Which of the following statement is false?",
+    "options": [
+      {
+        "key": "A",
+        "text": "3306 is the default MySQL port"
+      },
+      {
+        "key": "B",
+        "text": "Database name is nptel"
+      },
+      {
+        "key": "C",
+        "text": "The database server is hosted on IP 127.0.0.1"
+      },
+      {
+        "key": "D",
+        "text": "Username is java and password is joy"
+      }
+    ],
+    "answer": "D",
+    "answerText": "Username is java and password is joy"
+  },
+  {
+    "id": 107,
+    "week": 11,
+    "question": "What is the correct order to close database resources?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Connection → Statement → ResultSet"
+      },
+      {
+        "key": "B",
+        "text": "ResultSet → Statement → Connection"
+      },
+      {
+        "key": "C",
+        "text": "Statement → Connection → ResultSet"
+      },
+      {
+        "key": "D",
+        "text": "Statement → ResultSet → Connection"
+      }
+    ],
+    "answer": "B",
+    "answerText": "ResultSet → Statement → Connection"
+  },
+  {
+    "id": 108,
+    "week": 11,
+    "question": "What is the full form of JDBC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Java Database Connectivity"
+      },
+      {
+        "key": "B",
+        "text": "Java Data Code"
+      },
+      {
+        "key": "C",
+        "text": "Java Data Communication"
+      },
+      {
+        "key": "D",
+        "text": "Java Development Connectivity"
+      }
+    ],
+    "answer": "A",
+    "answerText": "Java Database Connectivity"
+  },
+  {
+    "id": 109,
+    "week": 11,
+    "question": "Fill in the missing code to establish a connection to a MySQL database. import java.sql.*; public class JDBCExample { public static void main(String[] args) { try { Class.forName(\"com.mysql.cj.jdbc.Driver\"); Connection connection = // INSERT CODE HERE; System.out.println(\"Connected to the database.\"); connection.close(); } catch (Exception e) { e.printStackTrace(); } } }",
+    "options": [
+      {
+        "key": "A",
+        "text": "DriverManager.connect(\"mysql:localhost:mydb\", \"user\", \"password\");"
+      },
+      {
+        "key": "B",
+        "text": "DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"
+      },
+      {
+        "key": "C",
+        "text": "Connection.get(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"
+      },
+      {
+        "key": "D",
+        "text": "Driver.connect(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"
+      }
+    ],
+    "answer": "B",
+    "answerText": "DriverManager.getConnection(\"jdbc:mysql://localhost:3306/mydb\", \"user\", \"password\");"
+  },
+  {
+    "id": 110,
+    "week": 11,
+    "question": "What is the purpose of the DriverManager class in JDBC?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To manage database connections"
+      },
+      {
+        "key": "B",
+        "text": "To execute SQL queries"
+      },
+      {
+        "key": "C",
+        "text": "To fetch data from a database"
+      },
+      {
+        "key": "D",
+        "text": "To represent a database record"
+      }
+    ],
+    "answer": "A",
+    "answerText": "To manage database connections"
+  },
+  {
+    "id": 111,
+    "week": 12,
+    "question": "Which method returns the number of characters in a Java String?",
+    "options": [
+      {
+        "key": "A",
+        "text": "size()"
+      },
+      {
+        "key": "B",
+        "text": "length()"
+      },
+      {
+        "key": "C",
+        "text": "count()"
+      },
+      {
+        "key": "D",
+        "text": "getSize()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "length()"
+  },
+  {
+    "id": 112,
+    "week": 12,
+    "question": "Which method is used to get a character at a specified position in a String?",
+    "options": [
+      {
+        "key": "A",
+        "text": "charAt()"
+      },
+      {
+        "key": "B",
+        "text": "getChar()"
+      },
+      {
+        "key": "C",
+        "text": "characterAt()"
+      },
+      {
+        "key": "D",
+        "text": "getAt()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "charAt()"
+  },
+  {
+    "id": 113,
+    "week": 12,
+    "question": "Which keyword is used to create a subclass in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "implements"
+      },
+      {
+        "key": "B",
+        "text": "inherits"
+      },
+      {
+        "key": "C",
+        "text": "extends"
+      },
+      {
+        "key": "D",
+        "text": "super"
+      }
+    ],
+    "answer": "C",
+    "answerText": "extends"
+  },
+  {
+    "id": 114,
+    "week": 12,
+    "question": "Which block is executed whether an exception occurs or not?",
+    "options": [
+      {
+        "key": "A",
+        "text": "try"
+      },
+      {
+        "key": "B",
+        "text": "catch"
+      },
+      {
+        "key": "C",
+        "text": "throw"
+      },
+      {
+        "key": "D",
+        "text": "finally"
+      }
+    ],
+    "answer": "D",
+    "answerText": "finally"
+  },
+  {
+    "id": 115,
+    "week": 12,
+    "question": "Which keyword is used to explicitly throw an exception in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "throws"
+      },
+      {
+        "key": "B",
+        "text": "throw"
+      },
+      {
+        "key": "C",
+        "text": "exception"
+      },
+      {
+        "key": "D",
+        "text": "catch"
+      }
+    ],
+    "answer": "B",
+    "answerText": "throw"
+  },
+  {
+    "id": 116,
+    "week": 12,
+    "question": "Which keyword is used to indicate that a method may throw an exception?",
+    "options": [
+      {
+        "key": "A",
+        "text": "throw"
+      },
+      {
+        "key": "B",
+        "text": "throws"
+      },
+      {
+        "key": "C",
+        "text": "try"
+      },
+      {
+        "key": "D",
+        "text": "finally"
+      }
+    ],
+    "answer": "B",
+    "answerText": "throws"
+  },
+  {
+    "id": 117,
+    "week": 12,
+    "question": "Which syntax is used to declare an array variable in Java?",
+    "options": [
+      {
+        "key": "A",
+        "text": "()"
+      },
+      {
+        "key": "B",
+        "text": "{}"
+      },
+      {
+        "key": "C",
+        "text": "[]"
+      },
+      {
+        "key": "D",
+        "text": "<>"
+      }
+    ],
+    "answer": "C",
+    "answerText": "[]"
+  },
+  {
+    "id": 118,
+    "week": 12,
+    "question": "Which layout manager arranges components in five regions?",
+    "options": [
+      {
+        "key": "A",
+        "text": "FlowLayout"
+      },
+      {
+        "key": "B",
+        "text": "BorderLayout"
+      },
+      {
+        "key": "C",
+        "text": "GridLayout"
+      },
+      {
+        "key": "D",
+        "text": "BoxLayout"
+      }
+    ],
+    "answer": "B",
+    "answerText": "BorderLayout"
+  },
+  {
+    "id": 119,
+    "week": 12,
+    "question": "Which method is used to register an ActionListener with a JButton?",
+    "options": [
+      {
+        "key": "A",
+        "text": "addActionListener()"
+      },
+      {
+        "key": "B",
+        "text": "addButtonListener()"
+      },
+      {
+        "key": "C",
+        "text": "setAction()"
+      },
+      {
+        "key": "D",
+        "text": "registerAction()"
+      }
+    ],
+    "answer": "A",
+    "answerText": "addActionListener()"
+  },
+  {
+    "id": 120,
+    "week": 12,
+    "question": "Which method of NetworkInterface is used to check whether a network interface is up?",
+    "options": [
+      {
+        "key": "A",
+        "text": "isActive()"
+      },
+      {
+        "key": "B",
+        "text": "isUp()"
+      },
+      {
+        "key": "C",
+        "text": "isRunning()"
+      },
+      {
+        "key": "D",
+        "text": "isConnected()"
+      }
+    ],
+    "answer": "B",
+    "answerText": "isUp()"
+  }
+]
