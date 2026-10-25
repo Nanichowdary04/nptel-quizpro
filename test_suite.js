@@ -222,6 +222,7 @@ assert(Array.isArray(quiz.pool) && quiz.pool.length > 0, 'Questions pool is popu
 quiz.render();
 const qOptionsAfterRender = mockQ.options.map(o => o.key);
 assert(JSON.stringify(qOptionsAfterRender) === JSON.stringify(['A', 'B', 'C', 'D']), 'Option order remains strictly stable across re-renders');
+assert(Array.isArray(quiz.sessionOrder[mockQ.id]) && quiz.sessionOrder[mockQ.id].length === 4, 'Options are jumbled into sessionOrder for current question');
 
 // Next & Previous navigation
 quiz.index = 0;

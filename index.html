@@ -1700,8 +1700,13 @@
       // Instant feedback ONLY in Mock Test or during Review mode
       const isRevealed = (mode === 'mock' && revealed.has(q.id)) || inReview;
 
-      // Options always in standard order (A, B, C, D) — only questions are jumbled
-      q.options.forEach(o => {
+      // Jumble/shuffle options per question and cache in sessionOrder for session stability
+      if (!sessionOrder[q.id]) {
+        sessionOrder[q.id] = shuffle([...q.options]);
+      }
+      const displayOptions = sessionOrder[q.id];
+
+      displayOptions.forEach(o => {
         const b = document.createElement('button');
         b.type = 'button';
         b.className = 'option';
@@ -2264,6 +2269,7 @@
     $('weekFilter').onchange = () => {
       const w = $('weekFilter').value;
       pool = shuffle((w === 'all' ? QUESTIONS : QUESTIONS.filter(q => q.week === +w)).map(q => q.id));
+      sessionOrder = {};
       index = 0;
       render();
     };

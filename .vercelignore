@@ -1,0 +1,6 @@
+cloudflared.exe
+*.log
+test_suite.js
+supabase-setup.sql
+ANTIGRAVITY_FIX_README.md
+.git
